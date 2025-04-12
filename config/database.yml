@@ -20,7 +20,12 @@ default: &default
 
 development:
   <<: *default
+  adapter: mysql2  
+  encoding: utf8  
   database: ruby_development
+  username: root
+  password: 09212006  
+  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
