@@ -1,0 +1,45 @@
+<style>
+    #documentos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #contenedor-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        background-color: gainsboro;
+        margin: 20px;
+        gap: 15px;
+        border-radius: 15px;
+    }
+
+    #contenedor-1 a{
+        text-decoration: none;
+        padding: 8px 25px;
+        background-color: white;
+        border: 1px solid;
+        border-radius: 5px;
+
+    }
+    #contenedor-1 h2{
+        font-size: 30px;
+    }
+
+    @media (max-width: 768px) {
+        #documentos{
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<div id="documentos">
+    <div id="contenedor-1">
+        <h2>Diagrama de clase</h2>
+        <a href="/assets/PDF/Diagrama_Clase.pdf">View</a>
+    </div>
+    <div id="contenedor-1">
+        <h2>Diagrama Entidad Relación</h2>
+        <a href="/assets/PDF/Diagrama_Entidad_Relacion.pdf">View</a>
+    </div>
+</main>
