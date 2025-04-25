@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_25_193526) do
+ActiveRecord::Schema[8.0].define(version: 2025_04_25_213707) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   create_table "contactos", force: :cascade do |t|
     t.string "nombre"
     t.string "correo"
-    t.integer "telefono"
+    t.string "telefono"
     t.string "direccion"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
