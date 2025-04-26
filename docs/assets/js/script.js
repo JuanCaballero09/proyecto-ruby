@@ -1,6 +1,21 @@
+function toggleMenu() {
+    const aside = document.querySelectorAll('#aside-1')
+    aside.forEach(link => {
+        link.classList.add('show');
+    });
+}
+
+function closeMenu(){
+    const aside = document.querySelectorAll('#aside-1')
+    aside.forEach(link => {
+        link.classList.remove('show');
+    })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    const section = document.getElementById('section1');
-    const links = document.querySelectorAll('#nav-link');
+    const section = document.getElementById('section-1');
+    const links = document.querySelectorAll('.nav-link');
+    const aside = document.getElementById("aside-1")
 
     function loadView(viewName){
         fetch(`views/${viewName}.html`)
@@ -12,16 +27,35 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    function syncActive(linkClicked) {
+        const view = linkClicked.getAttribute('data-section');
+
+        links.forEach(l => {
+            if(l.getAttribute('data-section') == view) {
+                l.classList.add('active');
+            }else{
+                l.classList.remove('active');
+            }
+        });
+    }
+
+
     links.forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault();
-            const views = link.getAttribute('data-section');
-            loadView(views);
-            links.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
+
+            const view = link.getAttribute('data-section');
+            loadView(view);
+            syncActive(link);
+
+            aside.classList.remove('show');
         });
     });
 
     loadView('home');
-    links[0].classList.add('active');
+    links.forEach(link => {
+        if (link.getAttribute('data-section') === 'home') {
+            link.classList.add('active');
+        }
+    })
 });

@@ -3,39 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola Mundo</title>
+    <title>Doc La Terraza Del Pri</title>
+    <link rel="icon" href="assets/img/icons/LogoTerrazaDelPri.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/style/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style/style1.css">
 </head>
 <body>
     <main>
+        <aside id="aside-1">
+            <a href="#" class="nav-link" data-section="home"><i class="fa-solid fa-house"></i><span>Home</span></a>
+            <a href="#" class="nav-link" data-section="integrantes"><i class="fa-solid fa-users"></i><span>integrantes</span></a>
+            <a href="#" class="nav-link" data-section="docs"><i class="fa-solid fa-book"></i><span>Docs</span></a>
+            <a href="#" class="nav-link" data-section="faq"><i class="fa-solid fa-question"></i><span>FAQ</span></a>
+            <button id="close" onclick="closeMenu()"><i class="fa-solid fa-circle-xmark"></i></button>
+        </aside>
         <nav id="nav-bar">
-            <a href="#" id="nav-link" data-section="home"><i class="fa-solid fa-house"></i><span>Home</span></a>
-            <a href="#" id="nav-link" data-section="integrantes"><i class="fa-solid fa-users"></i><span>integrantes</span></a>
-            <a href="#" id="nav-link" data-section="docs"><i class="fa-solid fa-book"></i><span>Docs</span></a>
-            <a href="#" id="nav-link" data-section="faq"><i class="fa-solid fa-question"></i><span>FAQ</span></a>
-            
-            <div class="icon" onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>
-                
-            </div>
-
+            <a href="#" class="nav-link" data-section="home"><i class="fa-solid fa-house"></i><span>Home</span></a>
+            <a href="#" class="nav-link" data-section="integrantes"><i class="fa-solid fa-users"></i><span>integrantes</span></a>
+            <a href="#" class="nav-link" data-section="docs"><i class="fa-solid fa-book"></i><span>Docs</span></a>
+            <a href="#" class="nav-link" data-section="faq"><i class="fa-solid fa-question"></i><span>FAQ</span></a>
+            <button id="icon" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
         </nav>
-        <header id="header">
+        <header id="header-1">
             <h1>Documentación</h1>
             <p></p>
         </header>
-        <section id="section1"></section>
+        <section id="section-1"></section>
     </main>
     <script src="assets/js/script.js"></script>
-    <script>
-        function toggleMenu() {  
-            var navbar = document.getElementById("nav-bar");  
-            var dropdown = document.getElementById("Dropdown");  
-            navbar.classList.toggle("responsive");  
-            dropdown.classList.toggle("show");  
-        }  
-    </script>
 </body>
 </html>
