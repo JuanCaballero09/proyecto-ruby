@@ -4,20 +4,30 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    #integrantes{
+    #inte{
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 20px;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
         margin: 15px;
-        gap: 15px;
         border-radius: 15px;
+        text-align: center;
     }
-    #integrantes i {
-        font-size: 30px;
+    #nombre{
+        font-size: 40px;
+        margin: 0;
+    }
+    #apellido{
+        font-size: 20px;
+    }
+
+    #redes a{
         color: black;
+        font-size: 35px;
+        margin: 0 7px;
     }
+
     @media (max-width: 767px) {
         #cont-inte{
             grid-template-columns: 1fr;
@@ -26,18 +36,20 @@
 </style>
 
 <div id="cont-inte">
-    <div id="integrantes">
-        <h1 id="nombre">Juan Esteban</h1>
-        <h1 id="apellido">Caballero Goenaga</h1>
-        <div>
+    <div id="inte">
+        <h2 id="nombre">Juan Esteban</h2>
+        <h2 id="apellido">Caballero Goenaga</h2>
+        <div id="redes">
             <a href="https://github.com/JuanCaballero09" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&to=juanes0921200@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </div>
-    <div id="integrantes">
-        <h1 id="nombre">Santiago David</h1>
-        <h1 id="apellido">Zambrano Izaquita</h1>
-        <div>
+    <div id="inte">
+        <h2 id="nombre">Santiago David</h2>
+        <h2 id="apellido">Zambrano Izaquita</h2>
+        <div id="redes">
             <a href="https://github.com/JuanCaballero09" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </div>
 </div>

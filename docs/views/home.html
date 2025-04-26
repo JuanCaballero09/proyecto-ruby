@@ -3,7 +3,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    #contenedor-1{
+    .contenedor{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -15,31 +15,44 @@
         border-radius: 15px;
     }
 
-    #contenedor-1 a{
+    .contenedor a{
         text-decoration: none;
-        padding: 8px 25px;
+        padding: 6px 20px;
         background-color: white;
         border: 1px solid;
         border-radius: 5px;
-
+        color: #198754;
+        font-size: 20px;
     }
-    #contenedor-1 h2{
+    .contenedor h2{
         font-size: 30px;
+    }
+    .contenedor p{
+        padding: 0 15px;
     }
 
     @media (max-width: 768px) {
         #documentos{
             grid-template-columns: 1fr;
         }
+
+        .btn-ver{
+            display: none;
+        }
     }
 </style>
 <div id="documentos">
-    <div id="contenedor-1">
+    <div class="contenedor">
         <h2>Diagrama de clase</h2>
-        <a href="/assets/PDF/Diagrama_Clase.pdf">View</a>
+        <p>EL diagrama de clases es un tipo de diagrama de estructura estática que describe la estructura de un sistema mostrando las clases del sistema, sus atributos, operaciones (o métodos), y las relaciones entre los objetos.</p>
+        <a href="/assets/PDF/Diagrama_Clase.pdf" class="btn-ver">Ver</a>
+        <a href="/assets/PDF/Diagrama_Clase.pdf" download>Descargar PDF</a>
+        
     </div>
-    <div id="contenedor-1">
+    <div class="contenedor">
         <h2>Diagrama Entidad Relación</h2>
-        <a href="/assets/PDF/Diagrama_Entidad_Relacion.pdf">View</a>
+        <p>Un modelo entidad-relación es una herramienta para el modelo de datos, la cual facilita la representación de entidades de una base de datos</p>
+        <a href="/assets/PDF/Diagrama_Entidad_Relacion.pdf" class="btn-ver">Ver</a>
+        <a href="/assets/PDF/Diagrama_Entidad_Relacion.pdf" download>Descargar PDF</a>
     </div>
 </main>
