@@ -1,42 +1,41 @@
-
-<style>
-    #cont-inte{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    #inte{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-        margin: 15px;
-        border-radius: 15px;
-        text-align: center;
-    }
-    #nombre{
-        font-size: 40px;
-        margin: 0;
-    }
-    #apellido{
-        font-size: 20px;
-    }
-
-    #redes a{
-        color: black;
-        font-size: 35px;
-        margin: 0 7px;
-    }
-
-    @media (max-width: 767px) {
-        #cont-inte{
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
-
+<style>  
+    #cont-inte {  
+        display: flex;  
+        flex-wrap: wrap;  
+        justify-content: center; /* Centra los elementos */  
+    }  
+    .inte {  
+        display: flex;  
+        flex-direction: column;  
+        align-items: center;  
+        padding: 20px;  
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);  
+        margin: 15px;  
+        border-radius: 15px;  
+        text-align: center;  
+        flex: 0 1 calc(50% - 30px);
+        box-sizing: border-box;
+    }  
+    #nombre {  
+        font-size: 40px;  
+        margin: 0;  
+    }  
+    #apellido {  
+        font-size: 20px;  
+    }  
+    #redes a {  
+        color: black;  
+        font-size: 35px;  
+        margin: 0 7px;  
+    }  
+    @media (max-width: 767px) {  
+        .inte {  
+            flex: 0 1 100%;
+        }  
+    }  
+</style>  
 <div id="cont-inte">
-    <div id="inte">
+    <div class="inte">
         <h2 id="nombre">Juan Esteban</h2>
         <h2 id="apellido">Caballero Goenaga</h2>
         <div id="redes">
@@ -44,11 +43,35 @@
             <a href="https://mail.google.com/mail/?view=cm&to=juanes0921200@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </div>
-    <div id="inte">
+    <div class="inte">
         <h2 id="nombre">Santiago David</h2>
         <h2 id="apellido">Zambrano Izaquita</h2>
         <div id="redes">
-            <a href="https://github.com/JuanCaballero09" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/San5472" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <!-- <a href="#"><i class="fa-solid fa-envelope"></i></a> -->
+        </div>
+    </div>
+    <div class="inte">
+        <h2 id="nombre">Andrw Stiven</h2>
+        <h2 id="apellido">Barrera Poveda</h2>
+        <div id="redes">
+            <a href="https://github.com/andrw790" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <!-- <a href="#"><i class="fa-solid fa-envelope"></i></a> -->
+        </div>
+    </div>
+    <div class="inte">
+        <h2 id="nombre">Wilber Eliécer</h2>
+        <h2 id="apellido">Robles Mercado</h2>
+        <div id="redes">
+            <a href="https://github.com/Tribalsoft" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&to=wilrm8sena@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+    <div class="inte">
+        <h2 id="nombre">Miguel Junior</h2>
+        <h2 id="apellido">Sarabia Soto</h2>
+        <div id="redes">
+            <a href="https://github.com/MiguelSarabiaSoto" target="https://mail.google.com/mail/?view=cm&to=Miguelsarabia08@hotmail.com"><i class="fa-brands fa-github"></i></a>
             <a href="#"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </div>
