@@ -7,7 +7,7 @@ body{
     justify-content: space-around;
     align-items: center;
     gap: 30px;
-    padding: 15px 30px;
+    padding: 15px 25px;
     position: sticky;
     left: 50%;
     top: 0;
@@ -78,7 +78,7 @@ body{
     align-items: center;
     transition: width 0.3s ease, left 0.3s ease;
     backdrop-filter: blur(45px);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     position: fixed;
     z-index: 12;
 }
@@ -94,7 +94,7 @@ body{
     background: none;
     font-size: 55px;
     color: #dc3545;
-    margin-top: 20vh;
+    margin-top: 40px;
 }
 
 #aside-1.show{
@@ -107,7 +107,7 @@ body{
     .nav-link {display: none;}
     .nav-link:hover:after{width: 0;}
     #nav-bar{
-        justify-content: flex-start;
+        display: block;
         position: static;
     }
     #icon{
