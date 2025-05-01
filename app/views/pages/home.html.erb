@@ -1,8 +1,8 @@
 <html>
     <%= stylesheet_link_tag "home", media: "all" %>
     <header>
-        <%= image_ta("Laterrazadelpri.png"), class: "logo"%>
         <h1>La Terraza del pri</h1>
+        <%= image_tag ("Laterrazadelpri.png"), class: "logo"%>
     <header>
     <nav>
         <form action="buscar" method="get">
@@ -10,23 +10,24 @@
         </form>
     </nav>
     <section>
-        <P>Menu</p>
-        Salchipapa
-        <form action="button" method="get">
-            <input type="button">
-        </form>
-        <article>
-            <%= image_tag("salchipapa.png") %>
-            <%= image_tag("salchipapa2.png") %>
+        <article class="salchipapa">
+            Salchipapa
+            <form action="button" method="get">
+                <input type="button">
+            </form>
+            <%= image_tag ("salchipapa.png", class: "salchipapa")%>
+            <%= image_tag ("salchipapa2.png", class: "salchipapa2")%>
         </article>
-        <article>
+
+        <article class="hamburguesa">
             <p>Hamburguesas</p>
             <form action="button" method="get">
                 <input type="button">
             </form>
-            <%= image_tag("Hamburgesas.png") %>
-            <%= image_tag("hamburguesas2.png") %>
+            <%= image_tag("Hamburgesas.png"), class: "hamburguesa" %>
+            <%= image_tag("hamburguesas2.png"), class: "hamburguesa2" %>
         </article>
+
         <article>
             <p>Pizzas</p>
             <form action="button" method="get">
