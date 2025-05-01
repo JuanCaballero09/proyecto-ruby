@@ -6,7 +6,7 @@ header h1 {
     width: 2000px;
     text-align: center;
     
-    .logo{
+    .img-logo{
         height: 100px;
         width: 200px;
     }
@@ -24,12 +24,46 @@ section {
         height: auto;
         width: 400px;
 
+        .img-salchipapa{
+            height: 100px;
+            width: 200px;
+        }
+
+        .img-salchipapa2{
+            height: 100px;
+            width: 200px;
+        }
+
+        
     }
 
     .hamburguesa{
         border: 1px solid black;
-        height: 200px;
+        height: auto;
         width: 400px;
 
+        .img-hamburguesas{
+            height: 100px;
+            width: 200px;
+        }
+        .img-hamburguesa2{
+            height: auto;
+            width: 200px;
+        }
+    }
+
+    .pizzas{
+        border: 1px solid black;
+        height: auto;
+        width: 400px;
+
+        .img-pizza{
+            height: 100px;
+            width: 200px;
+        }
+        .img-pizza2{
+            height: auto;
+            width: 400px;
+        }
     }
 }

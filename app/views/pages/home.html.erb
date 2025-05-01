@@ -2,7 +2,7 @@
     <%= stylesheet_link_tag "home", media: "all" %>
     <header>
         <h1>La Terraza del pri</h1>
-        <%= image_tag ("Laterrazadelpri.png"), class: "logo"%>
+        <%= image_tag   "Laterrazadelpri.png", class: "img-logo"%>
     <header>
     <nav>
         <form action="buscar" method="get">
@@ -12,11 +12,9 @@
     <section>
         <article class="salchipapa">
             Salchipapa
-            <form action="button" method="get">
-                <input type="button">
-            </form>
-            <%= image_tag ("salchipapa.png", class: "salchipapa")%>
-            <%= image_tag ("salchipapa2.png", class: "salchipapa2")%>
+           <button class="flecha-derecha">&#8592;</button>
+            <%= image_tag "salchipapa.png", class: "img-salchipapa"%>
+            <%= image_tag "salchipapa2.png", class: "img-salchipapa2"%>
         </article>
 
         <article class="hamburguesa">
@@ -24,17 +22,17 @@
             <form action="button" method="get">
                 <input type="button">
             </form>
-            <%= image_tag("Hamburgesas.png"), class: "hamburguesa" %>
-            <%= image_tag("hamburguesas2.png"), class: "hamburguesa2" %>
+            <%= image_tag "Hamburgesas.png", class: "img-hamburguesas" %>
+            <%= image_tag "hamburguesas2.png", class: "img-hamburguesa2" %>
         </article>
 
-        <article>
+        <article class = "pizzas" >
             <p>Pizzas</p>
             <form action="button" method="get">
                <input type="button">
             </form>
-            <%= image_tag("pizzas.png") %>
-            <%= image_tag("pizzas2.png") %>
+            <%= image_tag "pizzas.png", class: "img-pizza" %>
+            <%= image_tag "pizzas2.png", class: "img-pizza2" %>
         </article>
     </section>
 </html>
