@@ -1,2 +1,39 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<html>
+    <%= stylesheet_link_tag "home", media: "all" %>
+    <header>
+        <%= image_ta("Laterrazadelpri.png"), class: "logo"%>
+        <h1>La Terraza del pri</h1>
+    <header>
+    <nav>
+        <form action="buscar" method="get">
+            <input type="search" name="barra_busquedad">
+        </form>
+    </nav>
+    <section>
+        <P>Menu</p>
+        Salchipapa
+        <form action="button" method="get">
+            <input type="button">
+        </form>
+        <article>
+            <%= image_tag("salchipapa.png") %>
+            <%= image_tag("salchipapa2.png") %>
+        </article>
+        <article>
+            <p>Hamburguesas</p>
+            <form action="button" method="get">
+                <input type="button">
+            </form>
+            <%= image_tag("Hamburgesas.png") %>
+            <%= image_tag("hamburguesas2.png") %>
+        </article>
+        <article>
+            <p>Pizzas</p>
+            <form action="button" method="get">
+               <input type="button">
+            </form>
+            <%= image_tag("pizzas.png") %>
+            <%= image_tag("pizzas2.png") %>
+        </article>
+    </section>
+</html>

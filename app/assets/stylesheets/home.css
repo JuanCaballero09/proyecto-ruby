@@ -1,0 +1,11 @@
+header h1 {
+    color: yellow;
+    border: 1px solid black;
+    height: 100px;
+    width: 2000px;
+    
+    .logo{
+        width: 200px;
+    }
+
+}
