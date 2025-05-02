@@ -1,45 +1,124 @@
 <html>
-    <%= stylesheet_link_tag "home", media: "all" %>
-    <header>
-        <h1>La Terraza del pri</h1>
-        <%= image_tag "Laterrazadelpri.png", class: "img-logo"%>
-    <header>
-    <nav>
-        <form action="buscar" method="get">
-            <input type="search" name="barra_busquedad">
-        </form>
-    </nav>
-    <section>
-        <article class="salchipapa">
-            <h4>Salchipapas</h4>
-            <div class = "item">
-                <%= image_tag "salchipapa.png", class: "img-salchipapa"%>
-                <div class="informacion" >
-                    <h3>Salchipapa Trifasica</h3>
-                    <ul>
+    <main>
+        <%= stylesheet_link_tag "home", media: "all" %>
+        <header>
+            <h1>La Terraza del pri</h1>
+            <%= image_tag "Laterrazadelpri.png", class: "img-logo"%>
+        <header>
+        <nav>
+            <form action="buscar" method="get">
+                <input type="search" name="barra_busquedad">
+            </form>
+        </nav>
+        <section>
+                <!--Esta es la salchipapa-->
+            <article class="salchipapa">
+                <h4>Salchipapas</h4>
+                <div class = "item">
+                    <%= image_tag "salchipapa.png", class: "img-salchipapa"%>
+                    <div class="informacion" >
+                        <h3>Salchipapa Trifasica</h3>
+                        <ul>
+                                <li>Papas fritas</li>
+                                <li>Salchichas</li>
+                                <li>Queso</li>
+                                <li>Salsas</li>
+                        </ul>
+                        <p>Precio:</p>
+                        <button>Pedir</button>
+                    </div>
+                </div>
+                    <!--Esta es la segunda salchipapa-->
+                <div class="item">
+                    <%= image_tag "salchipapa2.png", class: "img-salchipapa2"%>
+                    <div class = "informacion">
+                        <h3>Salchipapa Trifasica</h3>
+                        <ul>
                             <li>Papas fritas</li>
                             <li>Salchichas</li>
                             <li>Queso</li>
                             <li>Salsas</li>
-                    </ul>
-                    <p>Precio:</p>
-                    <button>Pedir</button>
+                        </ul>
+                        <p>Precio:</p>
+                        <button>Pedir</button>
+                    </div>
                 </div>
-            </div>
-            <%= image_tag "salchipapa2.png", class: "img-salchipapa2"%>
-        </article>
-
-        <article class="hamburguesa">
-            <h4>Hamburguesas</h4>
-            <%= image_tag "Hamburgesas.png", class: "img-hamburguesas" %>
-            <%= image_tag "hamburguesas2.png", class: "img-hamburguesa2" %>
-        </article>
-
-        <article class = "pizzas">
-            <h4>Pizzas</h4>
-            <%= image_tag "pizzas.png", class: "img-pizza" %>
-            <%= image_tag "pizzas2.png", class: "img-pizza2" %>
-        </article>
-    </section>
-    <footer></footer>
+            </article>
+                <!--Estas son las hambueguesas-->
+            <article class="hamburguesa">
+                <h4>Hamburguesas</h4>
+                    <div class ="item">
+                        <%= image_tag "Hamburgesas.png", class: "img-hamburguesas" %>
+                        <div class= "informacion" >
+                            <h3>Hamburguesa carne</h3>
+                            <ul>
+                                <li>Pan</li>
+                                <li>Carne</li>
+                                <li>Queso</li>
+                                <li>Salsas</li>
+                                <li>lechuga</li>
+                            </ul>
+                            <p>Precio:</p>
+                            <button>Pedir</button>
+                        </div>
+                    </div>
+                    <!--Esta es la segunda hamburguesa-->
+                <div class="item">
+                    <%= image_tag "hamburguesas2.png", class: "img-hamburguesa2" %>
+                    <div class= "informacion">
+                     <h3>Hamburguesa Tapa Arterias</h3>
+                        <ul>
+                            <li>Pan</li>
+                            <li>Carne</li>
+                            <li>Queso</li>
+                            <li>Salsas</li>
+                            <li>lechuga</li>
+                        </ul>
+                        <p>Precio:</p>
+                        <button>Pedir</button>
+                    </div>
+                </div>
+            </article>
+            <!--Estas son las pizzas-->
+            <article class = "pizzas">
+                <h4>Pizzas</h4>
+                        <div class="item">
+                            <%= image_tag "pizzas.png", class: "img-pizza" %>
+                            <div class="informacion">
+                                <h3>Pizza jamón y queso</h3>
+                                <ul>
+                                    <li>Pan</li>
+                                    <li>Carne</li>
+                                    <li>Queso</li>
+                                    <li>Salsas</li>
+                                    <li>lechuga</li>
+                                </ul>
+                                <p>Precio:</p>
+                                <button>Pedir</button>
+                            </div>
+                        </div>
+                <!--Esta es la segunda pizza-->
+                    <div class= "item">
+                        <%= image_tag "pizzas2.png", class: "img-pizza2" %>
+                        <div class="informacion" >
+                            <h3>Pizza Peperoni</h3>
+                            <ul>
+                                <li>Pan</li>
+                                <li>Carne</li>
+                                <li>Queso</li>
+                                <li>Salsas</li>
+                                <li>lechuga</li>
+                            </ul>
+                            <p>Precio:</p>
+                            <button>Pedir</button>
+                        </div>
+                    </div>
+            </article>
+        </section>
+        <footer>
+            
+        </footer>
+    </main>
 </html>
+
+    

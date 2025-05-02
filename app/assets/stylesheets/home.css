@@ -33,41 +33,6 @@ section {
             height: 250px;
             width: 300px;
         }
-
-        
-        .item{
-            width: 200px;
-            border: 1px solid #ccc;
-            overflow: hidden;
-        }
-          
-            .item img {
-                width: 100%;
-                display: block;
-            }
-            
-            .item .informacion {
-                max-height: 0;
-                overflow: hidden;
-                background-color: #f0f0f0;
-                transition: max-height 0.5s ease;
-                padding: 0 10px;
-            }
-          
-          
-            .item:hover .informacion {
-                max-height: 300px;  
-                padding: 10px;
-            }
-          
-          .item button {
-                margin-top: 10px;
-                padding: 5px 10px;
-                background-color: yellow;
-                color: black;
-                border: none;
-                cursor: pointer;
-            }
           
         .img-salchipapa2{
             height: 250px;
@@ -79,7 +44,7 @@ section {
 
     .hamburguesa{
         border: 1px solid black;
-        height: 300px;
+        height: auto;
         width: 800px;
         display: flex;
         gap: 40px;
@@ -96,7 +61,7 @@ section {
 
     .pizzas{
         border: 1px solid black;
-        height: 300px;
+        height: auto;
         width: 800px;
         display: flex;
         gap: 40px;
@@ -111,4 +76,39 @@ section {
             width: 300px;
         }
     }
+    
+        
+    .item{
+        width: 200px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+    }
+      
+        .item img {
+            width: 100%;
+            display: block;
+        }
+        
+        .item .informacion {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            transition: max-height 0.5s ease;
+            padding: 0 10px;
+        }
+      
+      
+        .item:hover .informacion {
+            max-height: 300px;  
+            padding: 10px;
+        }
+      
+      .item button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: yellow;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
 }
