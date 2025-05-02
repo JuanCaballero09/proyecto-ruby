@@ -35,7 +35,7 @@ body{
 .login{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100dvh;
     justify-content: center;
     align-items: center;
     background: linear-gradient(70deg, var(--base-claro),var(--base),var(--base-oscuro));
