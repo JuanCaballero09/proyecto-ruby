@@ -5,5 +5,5 @@
     <h2>Bienvenido <%= current_user.nombre %></h2>
     <p>Tu correo es: <%= current_user.email %></p>
     <p>Tu telefono es: <%= current_user.telefono %></p>
-    <%= link_to 'cerrar sesion', destroy_user_session_path, method: :delete, data: { confirm: "¿Estas seguro?" } %>
+    <%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete, form: { "data-turbo-confirm": "¿Estás seguro que quieres cerrar sesión?" } %>
 <% end %>

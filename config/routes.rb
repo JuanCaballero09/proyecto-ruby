@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  devise_for :users
+  # devise_for :users
   root to: "home#index"
   get "home" => "home#index"
   # root "pages#home"
