@@ -1,7 +1,7 @@
 <html>
     <main>
         <%= stylesheet_link_tag "home", media: "all" %>
-        <header>
+        <header class ="inicio">
             <%= image_tag "Laterrazadelpri.png", class: "img-logo"%>
             <h1 class ="nombre" >La Terraza del pri</h1>
         </header>
@@ -13,22 +13,22 @@
         <p class="menu">Menu</p>
         <section>
             <section class="grupo">
-                <header>Salchipapas</header>
+                <header class="nombre-salchipapa">Salchipapas</header>
                 <article class="salchipapa">
-                <div class = "item">
-                    <%= image_tag "salchipapa.png", class: "img-salchipapa"%>
-                    <div class="informacion" >
-                        <h3>Salchipapa Trifasica</h3>
-                        <ul>
+                    <div class = "item">
+                        <%= image_tag "salchipapa.png", class: "img-salchipapa"%>
+                        <div class="informacion" >
+                            <h3>Salchipapa Trifasica</h3>
+                            <ul>
                                 <li>Papas fritas</li>
                                 <li>Salchichas</li>
                                 <li>Queso</li>
                                 <li>Salsas</li>
-                        </ul>
-                        <p>Precio:</p>
-                        <button>Pedir</button>
+                            </ul>
+                            <p>Precio:</p>
+                            <button>Pedir</button>
+                        </div>
                     </div>
-                </div>
                     <!--Esta es la segunda salchipapa-->
                 <div class="item">
                     <%= image_tag "salchipapa2.png", class: "img-salchipapa2"%>
@@ -44,45 +44,13 @@
                         <button>Pedir</button>
                     </div>
                 </div>
-            </article>
+                </article>
 
             </section>
-                <!--Esta es la salchipapa-->
-            <article class="salchipapa">
-                <h4 class ="nombre-salchipapa">Salchipapas</h4>
-                <div class = "item">
-                    <%= image_tag "salchipapa.png", class: "img-salchipapa"%>
-                    <div class="informacion" >
-                        <h3>Salchipapa Trifasica</h3>
-                        <ul>
-                                <li>Papas fritas</li>
-                                <li>Salchichas</li>
-                                <li>Queso</li>
-                                <li>Salsas</li>
-                        </ul>
-                        <p>Precio:</p>
-                        <button>Pedir</button>
-                    </div>
-                </div>
-                    <!--Esta es la segunda salchipapa-->
-                <div class="item">
-                    <%= image_tag "salchipapa2.png", class: "img-salchipapa2"%>
-                    <div class = "informacion">
-                        <h3>Salchipapa Trifasica</h3>
-                        <ul>
-                            <li>Papas fritas</li>
-                            <li>Salchichas</li>
-                            <li>Queso</li>
-                            <li>Salsas</li>
-                        </ul>
-                        <p>Precio:</p>
-                        <button>Pedir</button>
-                    </div>
-                </div>
-            </article>
-                <!--Estas son las hambueguesas-->
-            <article class="hamburguesa">
-                <h4>Hamburguesas</h4>
+            <!--Estas son las hambueguesas-->
+            <section class ="grupo-hamburguesas"> 
+                <header class="nombre-hamburguesas">Hamburguesas</header>
+                <article class="hamburguesa">
                     <div class ="item">
                         <%= image_tag "Hamburgesas.png", class: "img-hamburguesas" %>
                         <div class= "informacion" >
@@ -115,9 +83,11 @@
                     </div>
                 </div>
             </article>
-            <!--Estas son las pizzas-->
-            <article class = "pizzas">
-                <h4>Pizzas</h4>
+            </section>
+                <!--Estas son las pizzas-->
+            <section>
+                <header class="nombre-pizzas">Pizzas</header>
+                <article class = "pizzas">
                         <div class="item">
                             <%= image_tag "pizzas.png", class: "img-pizza" %>
                             <div class="informacion">
@@ -150,8 +120,20 @@
                         </div>
                     </div>
             </article>
-        </section>
-        <footer></footer>
+            </section>
+            </section>
+        <footer>
+            Siguenos en nuestras redes sociales
+            <div class="contenido-footer">
+                <p style="margin: 0;">© 2025 La Terraza del Pri</p>
+                <a href="https://www.tiktok.com/@laterrazadelpri?_t=8iQXZMitniI&_r=1" target="_blank">
+                    <%= image_tag "tiktokpng.png", class: "tiktok"%>
+                </a>
+                <a href="https://www.instagram.com/Laterrazadelpri/" target="_blank">
+                    <%= image_tag "instagram.png", class: "instagram"%> 
+                </a>
+            </div>
+        </footer>
     </main>
 </html>
 
