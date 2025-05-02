@@ -32,8 +32,17 @@ nav {
     
 }
 
+section .grupo{
+    border: 1px solid red;
+    /* height: 100px; */
+}
+
 section {
+
+    border: 1px solid blue;
+
     .salchipapa{
+        border: 1px solid red;
         height: auto;
         width: 800px;
         display: flex;
@@ -48,14 +57,12 @@ section {
             width: 300px;
             max-width: 100%;
         }
-          
+            
         .img-salchipapa2{
             height: 300px;
             width: 300px;
             max-width: 100%;
-        }
-
-        
+        }        
     }
 
     .hamburguesa{
