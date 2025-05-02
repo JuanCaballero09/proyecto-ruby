@@ -1,20 +1,22 @@
 header h1 {
-    color: white;
     border: 1px solid black;
     background-color: yellow;
+    color: white;
     height: 100px;
-    width: 2000px;
+    width: 100%;
     text-align: center;
     
-    .img-logo{
-        height: 100px;
-        width: 200px;
-    }
-
 }
+
+.img-logo{
+    height: 100px;
+    width: 200px;
+}
+
+
 nav {
-    border:1px solid black;
-    height: x;
+    border: 1px solid black;
+    height: 100px;
     width: 300px;
 }
 
@@ -22,16 +24,54 @@ section {
     .salchipapa{
         border: 1px solid black;
         height: auto;
-        width: 400px;
+        width: 800px;
+        display: flex;
+        gap: 40px;
+        
 
         .img-salchipapa{
-            height: 100px;
-            width: 200px;
+            height: 250px;
+            width: 300px;
         }
 
-        .img-salchipapa2{
-            height: 100px;
+        
+        .item{
             width: 200px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+          
+            .item img {
+                width: 100%;
+                display: block;
+            }
+            
+            .item .informacion {
+                max-height: 0;
+                overflow: hidden;
+                background-color: #f0f0f0;
+                transition: max-height 0.5s ease;
+                padding: 0 10px;
+            }
+          
+          
+            .item:hover .informacion {
+                max-height: 300px;  
+                padding: 10px;
+            }
+          
+          .item button {
+                margin-top: 10px;
+                padding: 5px 10px;
+                background-color: yellow;
+                color: black;
+                border: none;
+                cursor: pointer;
+            }
+          
+        .img-salchipapa2{
+            height: 250px;
+            width: 300px;
         }
 
         
@@ -39,31 +79,36 @@ section {
 
     .hamburguesa{
         border: 1px solid black;
-        height: auto;
-        width: 400px;
+        height: 300px;
+        width: 800px;
+        display: flex;
+        gap: 40px;
 
         .img-hamburguesas{
-            height: 100px;
-            width: 200px;
+            height: 250px;
+            width: 300px;
         }
         .img-hamburguesa2{
-            height: auto;
-            width: 200px;
+            height: 250px;
+            width: 300px;
         }
     }
 
     .pizzas{
         border: 1px solid black;
-        height: auto;
-        width: 400px;
+        height: 300px;
+        width: 800px;
+        display: flex;
+        gap: 40px;
+        
 
         .img-pizza{
-            height: 100px;
-            width: 200px;
+            height: 250px;
+            width: 300px;
         }
         .img-pizza2{
-            height: auto;
-            width: 400px;
+            height: 250px;
+            width: 300px;
         }
     }
 }
