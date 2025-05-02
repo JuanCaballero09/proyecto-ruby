@@ -1,16 +1,22 @@
-header h1 {
-    border: 1px solid black;
-    background-color: rgb(255, 247, 1);
+header {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    background-color: yellow;
+    padding: 20px;
+}
+
+.nombre {
+    margin: 0;
+    font-size: 24px;
+    margin-right: 40px;
     color: white;
-    height: 100px;
-    width: 100%;
-    text-align: center;
-    
 }
 
 .img-logo{
-    height: 50px;
-    width: 50px;
+    width: 150px;
+    margin-right: 10px;
+    border-radius: 100px;
 }
 
 
@@ -26,16 +32,21 @@ section {
         width: 800px;
         display: flex;
         gap: 40px;
-        
+
+        .nombre-salchipapa{
+            top: 10px;
+        }
 
         .img-salchipapa{
-            height: 250px;
+            height: 300px;
             width: 300px;
+            max-width: 100%;
         }
           
         .img-salchipapa2{
-            height: 250px;
+            height: 300px;
             width: 300px;
+            max-width: 100%;
         }
 
         
@@ -46,14 +57,17 @@ section {
         width: 800px;
         display: flex;
         gap: 40px;
+        
 
         .img-hamburguesas{
             height: 250px;
             width: 300px;
+            max-width: 100%;
         }
         .img-hamburguesa2{
             height: 250px;
             width: 300px;
+            max-width: 100%;
         }
     }
 
@@ -67,23 +81,21 @@ section {
         .img-pizza{
             height: 250px;
             width: 300px;
+            max-width: 100%;
         }
         .img-pizza2{
             height: 250px;
             width: 300px;
+            max-width: 100%;
         }
     }
     
         
     .item{
-        width: 200px;
+        width: 300px;
         border: 1px solid #ccc;
         overflow: hidden;
     }
-      
-        .item img {
-            display: block;
-        }
         
         .item .informacion {
             max-height: 0;

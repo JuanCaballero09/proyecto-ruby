@@ -2,9 +2,9 @@
     <main>
         <%= stylesheet_link_tag "home", media: "all" %>
         <header>
-            <h1>La Terraza del pri</h1>
             <%= image_tag "Laterrazadelpri.png", class: "img-logo"%>
-        <header>
+            <h1 class ="nombre" >La Terraza del pri</h1>
+        </header>
         <nav>
             <form action="buscar" method="get">
                 <input type="search" name="barra_busquedad">
@@ -13,7 +13,7 @@
         <section>
                 <!--Esta es la salchipapa-->
             <article class="salchipapa">
-                <h4>Salchipapas</h4>
+                <h4 class ="nombre-salchipapa" >Salchipapas</h4>
                 <div class = "item">
                     <%= image_tag "salchipapa.png", class: "img-salchipapa"%>
                     <div class="informacion" >
