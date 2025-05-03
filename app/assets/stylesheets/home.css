@@ -1,5 +1,6 @@
 .inicio {
-    height: 110px;
+    border: 1px solid black;
+    height: 150px;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,19 +10,18 @@
     align-items: center;     
     background-color: yellow;
     padding: 20px;
-    z-index: 1000;
-
+    z-index: 100;
 }
 
 .nombre {
     margin: 0;
     font-size: 24px;
     margin-right: 40px;
-    color: white;
+    color: black;
 }
 
 .img-logo{
-    width: 150px;
+    width: 130px;
     margin-right: 10px;
     border-radius: 100px;
 }
@@ -32,14 +32,18 @@ body{
 
     nav {
         border: 1px solid black;
-        height: 50px;
-        width: 300px;
+        height: 200px;
+        width: 100%;
+    }
+    .busquedad{
+        margin-top: 180px;
+        margin-bottom: 50px;
     }
     
     .menu{
         font-family: Arial, Helvetica, sans-serif;
         font-size: xx-large;
-        
+        text-align: center;
     }
     
     section {
@@ -122,6 +126,7 @@ body{
             overflow: hidden;
             margin-right: 30px;
             margin-bottom: 50px;
+            border-radius: 10px;
         }
             
             .item .informacion {
@@ -149,6 +154,7 @@ body{
     }
 }
 footer{
+    border: 1px solid black;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -161,6 +167,10 @@ footer{
     align-items: center;
     z-index: 1000;
     
+}
+
+.contenido-footer{
+    align-items: center;
 }
 
 .tiktok{

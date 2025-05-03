@@ -6,9 +6,11 @@
             <h1 class ="nombre" >La Terraza del pri</h1>
         </header>
         <nav>
-            <form action="buscar" method="get">
-                <input type="search" name="barra_busquedad">
-            </form>
+            <div class="busquedad" >
+                <form action="buscar" method="get">
+                    <input type="search" name="barra_busquedad">
+                </form>
+            </div>
         </nav>
         <p class="menu">Menu</p>
         <section>
@@ -123,14 +125,13 @@
             </section>
             </section>
         <footer>
-            Siguenos en nuestras redes sociales
             <div class="contenido-footer">
                 <p style="margin: 0;">© 2025 La Terraza del Pri</p>
                 <a href="https://www.tiktok.com/@laterrazadelpri?_t=8iQXZMitniI&_r=1" target="_blank">
                     <%= image_tag "tiktokpng.png", class: "tiktok"%>
                 </a>
                 <a href="https://www.instagram.com/Laterrazadelpri/" target="_blank">
-                    <%= image_tag "instagram.png", class: "instagram"%> 
+                    <%= image_tag "Instagram.png", class: "instagram"%> 
                 </a>
             </div>
         </footer>
