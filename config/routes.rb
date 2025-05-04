@@ -16,5 +16,9 @@ Rails.application.routes.draw do
   end
   
   get "home" => "home#index"
+  get "up" => "rails/health#show", as: :rails_health_check
+  get "/carrito", to:  "carritos#show", as: "carrito"
+  get "/menu", to: "menus#show", as: "menu" 
+
   # root "pages#home"
 end
