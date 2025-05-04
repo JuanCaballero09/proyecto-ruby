@@ -11,6 +11,9 @@
                     <input type="search" name="barra_busquedad">
                 </form>
             </div>
+                <%= link_to carrito_path, class: "boton-carrito" do %>
+                    <%= image_tag "carrito_compra.jpg",  class: "img-carrito"%>
+                <% end %>
         </nav>
         <p class="menu">Menu</p>
         <section>
@@ -46,6 +49,10 @@
                         <button>Pedir</button>
                     </div>
                 </div>
+                    <!--Este es el boton que lleva a la pagina del menu-->
+                    <%= link_to menu_path, class: "boton-pizza" do %>
+                        <%= image_tag "flecha.png", class: "img-boton-flecha"%>
+                    <% end %>
                 </article>
 
             </section>
@@ -84,6 +91,10 @@
                         <button>Pedir</button>
                     </div>
                 </div>
+                <!--Este es el boton que lleva a la pagina del menu-->
+                    <%= link_to menu_path, class: "boton-pizza" do %>
+                        <%= image_tag "flecha.png", class: "img-boton-flecha"%>
+                    <% end %>
             </article>
             </section>
                 <!--Estas son las pizzas-->
@@ -119,18 +130,23 @@
                             </ul>
                             <p>Precio:</p>
                             <button>Pedir</button>
+
                         </div>
                     </div>
+                    <!--Este es el boton que lleva a la pagina del menu-->
+                        <%= link_to menu_path, class: "boton-pizza" do %>
+                            <%= image_tag "flecha.png", class: "img-boton-flecha"%>
+                        <% end %>
             </article>
             </section>
             </section>
         <footer>
             <div class="contenido-footer">
                 <p style="margin: 0;">© 2025 La Terraza del Pri</p>
-                <a href="https://www.tiktok.com/@laterrazadelpri?_t=8iQXZMitniI&_r=1" target="_blank">
+                <a href="https://www.tiktok.com/@laterrazadelpri?_t=8iQXZMitniI&_r=1">
                     <%= image_tag "tiktokpng.png", class: "tiktok"%>
                 </a>
-                <a href="https://www.instagram.com/Laterrazadelpri/" target="_blank">
+                <a href="https://www.instagram.com/Laterrazadelpri/">
                     <%= image_tag "Instagram.png", class: "instagram"%> 
                 </a>
             </div>

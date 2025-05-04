@@ -1,49 +1,74 @@
-.inicio {
-    border: 1px solid black;
-    height: 150px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;     
-    background-color: yellow;
-    padding: 20px;
-    z-index: 100;
-}
+    .inicio {
+        border: 1px solid black;
+        height: 150px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+        background-color: yellow;
+        padding: 20px;
+    }
+    
+    .nombre {
+        margin: 0;
+        font-size: 24px;
+        margin-right: 40px;
+        color: black;
+        font-size: xx-large;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .img-logo{
+        width: 150px;
+        margin-right: 10px;
+        border-radius: 100px;
+    }
+    
 
-.nombre {
-    margin: 0;
-    font-size: 24px;
-    margin-right: 40px;
-    color: black;
-}
-
-.img-logo{
-    width: 130px;
-    margin-right: 10px;
-    border-radius: 100px;
-}
 
 body{
     padding-top: 60px;
     padding-bottom: 60px;
+    height: 100%;
+    width: 100%;
 
     nav {
         border: 1px solid black;
+        background-color: gray;
         height: 200px;
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+
+        .busquedad{
+            margin-top: 180px;
+            margin-bottom: 50px;    
+        }
+
+        .img-carrito{
+            height: 80  px;
+            width: 80px;
+            margin-bottom: -100px;
+            border-radius: 80px;
+        }
     }
-    .busquedad{
-        margin-top: 180px;
-        margin-bottom: 50px;
-    }
+
+    
     
     .menu{
         font-family: Arial, Helvetica, sans-serif;
         font-size: xx-large;
-        text-align: center;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 20px;
+        display: inline-block;
     }
     
     section {
@@ -107,7 +132,6 @@ body{
             display: flex;
             gap: 40px;
             
-    
             .img-pizza{
                 height: 250px;
                 width: 300px;
@@ -119,8 +143,12 @@ body{
                 max-width: 100%;
             }
         }
-        
-            
+
+        .img-boton-flecha{
+            height: 50px;
+            width: 50px; 
+        }
+
         .item{
             width: 300px;
             overflow: hidden;
