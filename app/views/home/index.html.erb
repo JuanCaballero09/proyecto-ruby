@@ -1,2 +1,9 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+<br><br>
+<% if user_signed_in? %>
+    <h2>Bienvenido <%= current_user.nombre %></h2>
+    <p>Tu correo es: <%= current_user.email %></p>
+    <p>Tu telefono es: <%= current_user.telefono %></p>
+    <%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete, form: { "data-turbo-confirm": "¿Estás seguro que quieres cerrar sesión?" } %>
+<% end %>

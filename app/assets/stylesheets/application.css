@@ -8,3 +8,237 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ /*
+ *= require bootstrap.min
+ *= require_self
+ */
+
+:root {
+    
+    --base: #fec104;
+    --base-oscuro: #f9a800;
+    --base-claro: #f5d03a;
+    --naranja: #ff6f00;
+    --blanco: #ffffff;
+    --negro: #333333;
+
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(70deg, var(--base-claro),var(--base),var(--base-oscuro));
+}
+.login-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.login-header img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f9f9f9;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+ }
+.login-form h2{
+    margin-bottom: 20px;
+}
+.login-form label{
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-form input[type="email"],
+.login-form input[type="password"], :focus{
+    outline: none;
+}
+
+.login-form input[type="submit"]{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin: 0 auto 15px auto;
+    padding: 7px 10px ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-form input[type="submit"]:hover{
+    background-color: #0056b3;
+}
+.login-form a{
+    color: #007bff;
+    text-decoration: none;
+}
+.login-form a:hover{
+    text-decoration: underline;
+}
+.login-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.social img{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.registro{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(70deg, var(--base-claro),var(--base),var(--base-oscuro));
+}
+
+.registro-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.registro-header img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f9f9f9;
+}
+.registro-form{
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+ }
+.registro-form h2{
+    margin-bottom: 20px;
+}
+.registro-form label{
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.registro-form input[type="text"],
+.registro-form input[type="email"],
+.registro-form input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.registro-form input[type="text"],
+.registro-form input[type="email"],
+.registro-form input[type="password"], :focus{
+    outline: none;
+}
+
+.registro-form em{
+    color: var(--negro);
+    font-size: 12px;
+    display: block;
+}
+
+.registro-form input[type="submit"]{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin: 0 auto 15px auto;
+    padding: 7px 10px ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.registro-form input[type="submit"]:hover{
+    background-color: #0056b3;
+}
+.registro-form a{
+    color: #007bff;
+    text-decoration: none;
+}
+.registro-form a:hover{
+    text-decoration: underline;
+}
+.registro-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.social img{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.registro-form ol {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.registro-form ol li {
+    margin-bottom: 5px;
+    width: 100%;
+}

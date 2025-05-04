@@ -10,18 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_25_213707) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_01_173431) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
-
-  create_table "contactos", force: :cascade do |t|
-    t.string "nombre"
-    t.string "correo"
-    t.string "telefono"
-    t.string "direccion"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -31,6 +22,13 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_25_213707) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "nombre"
+    t.string "apellido"
+    t.string "telefono"
+    t.integer "rol", default: 0
+    t.boolean "activo", default: true
+    t.datetime "ultimo_acceso"
+    t.date "fecha_registro", default: -> { "CURRENT_DATE" }
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
