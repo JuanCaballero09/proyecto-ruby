@@ -309,12 +309,12 @@ body{
 
 .botonL{
     position: absolute;
-    left: 0;
+    left: 10px;
 }
 
 .botonR{
     position:absolute;
-    right: 0;
+    right: 10px;
 
 }
 
