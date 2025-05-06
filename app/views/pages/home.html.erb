@@ -1,157 +1,78 @@
-<html>
-    <main>
-        <%= stylesheet_link_tag "home", media: "all" %>
-        <header class ="inicio">
-            <%= image_tag "Laterrazadelpri.png", class: "img-logo"%>
-            <h1 class ="nombre" >La Terraza del pri</h1>
-        </header>
-        <nav>
-            <div class="busquedad" >
-                <form action="buscar" method="get">
-                    <input type="search" name="barra_busquedad">
-                </form>
+<header class="header">
+    <h1>La Terraza del Pri</h1>
+    <%= image_tag "LogoTerrazaDelPri.svg" %>
+</header>
+
+<nav class="navbar">
+
+    <div class="busqueda" >
+
+        <input type="search" name="barra_busquedad">
+        <button type="submit">
+            <%= image_tag "icons/magnifying-glass-solid.svg" %>
+        </button>
+    </div>
+    <%= link_to carrito_path, class: "carrito" do %>
+        <%= image_tag "icons/cart-shopping-solid.svg" %>
+    <% end %>
+    <%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete, form: { "data-turbo-confirm": "¿Estás seguro que quieres cerrar sesión?" } %>
+    <%= image_tag "icons/user-solid.svg", class: "user" %>
+</nav>
+
+<section>
+        <div class="grupo">
+            <h1>Hamburguesas</h1>
+            <div class="cartas">
+                <button class="botonL">←</button>
+                    <div class="carta">
+                        <%= image_tag "Hamburgesas.png" %>
+                        <h2>Hamburguesa 1</h2>
+                    </div>
+                    <div class="carta">
+                        <%= image_tag "hamburguesas2.png" %>
+                        <h2>Hamburguesa 2</h2>
+                    </div>
+                    <div class="carta">
+                    <%= image_tag "Hamburgesas.png" %>
+                        <h2>Hamburguesa 3</h2>
+                    </div>
+                <button class="botonR">→</button>
             </div>
-                <%= link_to carrito_path, class: "boton-carrito" do %>
-                    <%= image_tag "carrito_compra.jpg",  class: "img-carrito"%>
-                <% end %>
-        </nav>
-        <p class="menu">Menu</p>
-        <section>
-            <section class="grupo">
-                <header class="nombre-salchipapa">Salchipapas</header>
-                <article class="salchipapa">
-                    <div class = "item">
-                        <%= image_tag "salchipapa.png", class: "img-salchipapa"%>
-                        <div class="informacion" >
-                            <h3>Salchipapa Trifasica</h3>
-                            <ul>
-                                <li>Papas fritas</li>
-                                <li>Salchichas</li>
-                                <li>Queso</li>
-                                <li>Salsas</li>
-                            </ul>
-                            <p>Precio:</p>
-                            <button>Pedir</button>
-                        </div>
+        </div>
+        <div class="grupo">
+            <h1>Pizza</h1>
+            <div class="cartas">
+                <button class="botonL">←</button>
+                    <div class="carta">
+                        <%= image_tag "pizzas.png" %>
+                        <h2>Pizza 1</h2>
                     </div>
-                    <!--Esta es la segunda salchipapa-->
-                <div class="item">
-                    <%= image_tag "salchipapa2.png", class: "img-salchipapa2"%>
-                    <div class = "informacion">
-                        <h3>Salchipapa Trifasica</h3>
-                        <ul>
-                            <li>Papas fritas</li>
-                            <li>Salchichas</li>
-                            <li>Queso</li>
-                            <li>Salsas</li>
-                        </ul>
-                        <p>Precio:</p>
-                        <button>Pedir</button>
+                    <div class="carta">
+                        <%= image_tag "pizzas2.png" %>
+                        <h2>Pizza 2</h2>
                     </div>
-                </div>
-                    <!--Este es el boton que lleva a la pagina del menu-->
-                    <%= link_to menu_path, class: "boton-pizza" do %>
-                        <%= image_tag "flecha.png", class: "img-boton-flecha"%>
-                    <% end %>
-                </article>
-
-            </section>
-            <!--Estas son las hambueguesas-->
-            <section class ="grupo-hamburguesas"> 
-                <header class="nombre-hamburguesas">Hamburguesas</header>
-                <article class="hamburguesa">
-                    <div class ="item">
-                        <%= image_tag "Hamburgesas.png", class: "img-hamburguesas" %>
-                        <div class= "informacion" >
-                            <h3>Hamburguesa carne</h3>
-                            <ul>
-                                <li>Pan</li>
-                                <li>Carne</li>
-                                <li>Queso</li>
-                                <li>Salsas</li>
-                                <li>lechuga</li>
-                            </ul>
-                            <p>Precio:</p>
-                            <button>Pedir</button>
-                        </div>
+                    <div class="carta">
+                    <%= image_tag "pizzas.png" %>
+                        <h2>Pizza 3</h2>
                     </div>
-                    <!--Esta es la segunda hamburguesa-->
-                <div class="item">
-                    <%= image_tag "hamburguesas2.png", class: "img-hamburguesa2" %>
-                    <div class= "informacion">
-                     <h3>Hamburguesa Tapa Arterias</h3>
-                        <ul>
-                            <li>Pan</li>
-                            <li>Carne</li>
-                            <li>Queso</li>
-                            <li>Salsas</li>
-                            <li>lechuga</li>
-                        </ul>
-                        <p>Precio:</p>
-                        <button>Pedir</button>
-                    </div>
-                </div>
-                <!--Este es el boton que lleva a la pagina del menu-->
-                    <%= link_to menu_path, class: "boton-pizza" do %>
-                        <%= image_tag "flecha.png", class: "img-boton-flecha"%>
-                    <% end %>
-            </article>
-            </section>
-                <!--Estas son las pizzas-->
-            <section>
-                <header class="nombre-pizzas">Pizzas</header>
-                <article class = "pizzas">
-                        <div class="item">
-                            <%= image_tag "pizzas.png", class: "img-pizza" %>
-                            <div class="informacion">
-                                <h3>Pizza jamón y queso</h3>
-                                <ul>
-                                    <li>Pan</li>
-                                    <li>Carne</li>
-                                    <li>Queso</li>
-                                    <li>Salsas</li>
-                                    <li>lechuga</li>
-                                </ul>
-                                <p>Precio:</p>
-                                <button>Pedir</button>
-                            </div>
-                        </div>
-                <!--Esta es la segunda pizza-->
-                    <div class= "item">
-                        <%= image_tag "pizzas2.png", class: "img-pizza2" %>
-                        <div class="informacion" >
-                            <h3>Pizza Peperoni</h3>
-                            <ul>
-                                <li>Pan</li>
-                                <li>Carne</li>
-                                <li>Queso</li>
-                                <li>Salsas</li>
-                                <li>lechuga</li>
-                            </ul>
-                            <p>Precio:</p>
-                            <button>Pedir</button>
-
-                        </div>
-                    </div>
-                    <!--Este es el boton que lleva a la pagina del menu-->
-                        <%= link_to menu_path, class: "boton-pizza" do %>
-                            <%= image_tag "flecha.png", class: "img-boton-flecha"%>
-                        <% end %>
-            </article>
-            </section>
-            </section>
-        <footer>
-            <div class="contenido-footer">
-                <p style="margin: 0;">© 2025 La Terraza del Pri</p>
-                <a href="https://www.tiktok.com/@laterrazadelpri?_t=8iQXZMitniI&_r=1">
-                    <%= image_tag "tiktokpng.png", class: "tiktok"%>
-                </a>
-                <a href="https://www.instagram.com/Laterrazadelpri/">
-                    <%= image_tag "Instagram.png", class: "instagram"%> 
-                </a>
+                <button class="botonR">→</button>
             </div>
-        </footer>
-    </main>
-</html>
+        </div>
+</section>
 
-    
+<footer class="footer">
+    <div class="social">
+    <a href="https://www.instagram.com/laterrazadelpri?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        <%= image_tag "icons/instagram-brands.svg" %>
+    </a>
+    <a href="https://wa.me/573113678033" target="_blank">
+        <%= image_tag "icons/whatsapp-brands.svg" %>
+    </a>
+    <a href="https://www.tiktok.com/@laterrazadelpri?is_from_webapp=1&sender_device=pc" target="_blank">
+        <%= image_tag "icons/tiktok-brands.svg" %>
+    </a>
+    </div>
+    <p>© 2023 La Terraza del Pri. Todos los derechos reservados.</p>
+</footer>
+
+
