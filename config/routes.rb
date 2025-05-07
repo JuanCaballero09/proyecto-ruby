@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get "pages/carrito"
+  get "pages/home"
+  get "pages/dashboard"
+  get "pages/menu"
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # devise_for :users
 
@@ -15,10 +20,8 @@ Rails.application.routes.draw do
     root to: "devise/sessions#new"
   end
   
-  get "home" => "home#index"
-  get "up" => "rails/health#show", as: :rails_health_check
-  get "/carrito", to:  "carritos#show", as: "carrito"
-  get "/menu", to: "menus#show", as: "menu" 
-
+  get "index", to: "pages#index"
+  get 'carrito', to: 'pages#carrito', as: 'carrito' 
+  get 'menu', to: 'pages#menu', as: 'menu'
   # root "pages#home"
 end
