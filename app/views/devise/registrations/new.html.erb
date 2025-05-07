@@ -1,9 +1,9 @@
 <section class="registro">
-  <header class="registro-header">
+  <header class="session-header">
     <h1>La Terraza del Pri</h1>
     <%= image_tag "LogoTerrazaDelPri.svg" %>
   </header>
-  <div class="registro-form">
+  <div class="session-form">
     <h2>Regístrate</h2>
     
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -47,9 +47,10 @@
       </div>
     <% end %>
 
-    <%= render "devise/shared/links" %>
+    <p>¿Ya tienes cuanta? <br> <%= link_to "Inicia sesion", new_session_path(resource_name) %></p>
+
   </div>
-  <footer class="registro-footer">
+  <footer class="session-footer">
     <div class="social">
       <a href="https://www.instagram.com/laterrazadelpri?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
         <%= image_tag "icons/instagram-brands.svg" %>
