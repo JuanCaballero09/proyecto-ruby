@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+Grupo.destroy_all
+
+Grupo.create(nombre: "Hamburguesa")
+Grupo.create(nombre: "Pizza")
+Grupo.create(nombre: "Salchipapa")
+
+puts "Grupos creados #{Grupo.count}"

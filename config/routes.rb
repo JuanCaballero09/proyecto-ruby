@@ -24,4 +24,6 @@ Rails.application.routes.draw do
   get 'carrito', to: 'pages#carrito', as: 'carrito' 
   get 'menu', to: 'pages#menu', as: 'menu'
   # root "pages#home"
+
+  resources :grupos, only: [:index, :new, :create]
 end
