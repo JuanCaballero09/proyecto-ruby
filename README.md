@@ -1,24 +1,35 @@
-# README
+# Proyecto Web y App Móvil: Ruby on Rails + Flutter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este repositorio contiene el desarrollo de un sistema completo compuesto por:
 
-Things you may want to cover:
+- 🌐 Una **aplicación web** construida con **Ruby on Rails**.
+- 📱 Una **aplicación móvil** multiplataforma desarrollada con **Flutter**.
+- 📄 Documentación técnica organizada en archivos html.
 
-* Ruby version
+## Tecnologías utilizadas
 
-* System dependencies
+- **Ruby on Rails**: Framework backend y frontend para la aplicación web.
+- **Flutter**: Framework de UI para la aplicación móvil (Android/iOS).
+- **PostgreSQL**: Base de datos predeterminada de Rails.
+- **Html**: Para la documentación técnica del proyecto.
 
-* Configuration
+## Estructura del repositorio
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+.
+├── Ruby-Proyect/        # Proyecto Ruby on Rails
+│   ├── app/
+│   ├── config/
+│   ├── db/
+│   └── ...
+├── Flutter-Proyect/    # Proyecto Flutter
+│   ├── lib/
+│   ├── android/
+│   ├── ios/
+│   └── ...
+├── docs/               # Documentación técnica en HTML
+│   ├── PDF/
+│   ├── views/
+│   ├── index.html
+│   └── ...
+├── README.md
