@@ -1,0 +1,9 @@
+<h1>Grupos creados</h1>
+
+<ul>
+    <% @grupos.each do |grupo|%>
+    <li><%= grupo.nombre %></li>
+    <% end %>
+</ul>
+
+<%= link_to "Crear un nuevo grupo", new_grupo_path %>
