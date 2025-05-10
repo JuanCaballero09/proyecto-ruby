@@ -16,20 +16,13 @@ ActiveRecord::Base.connection.reset_pk_sequence!('users')
 puts "creando usuarios"
 User.create(
   email: "admin@admin",
-  password: "123456",
+  password: "rasdix-jePjor-kohsy6",
   nombre: "Admin",
   apellido: "Admin",
   telefono: "123456789",
   rol: :admin
 )
-User.create(
-  email: "juanes09212006@gmail.com",
-  password: "09212006",
-  nombre: "Juan Esteban",
-  apellido: "Caballero Goenaga",
-  telefono: "3024681298",
-  rol: :cliente
-)
+
 puts "Usuarios creados #{User.count}"
 
 
