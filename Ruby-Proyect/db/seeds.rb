@@ -23,7 +23,7 @@ User.create(
   rol: :admin
 )
 User.create(
-  email: "juanes0921200@gmail.com",
+  email: "juanes09212006@gmail.com",
   password: "09212006",
   nombre: "Juan Esteban",
   apellido: "Caballero Goenaga",
