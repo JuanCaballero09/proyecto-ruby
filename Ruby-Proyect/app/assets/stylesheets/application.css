@@ -548,6 +548,9 @@ input:focus{outline: none;}
 }
 
 .dashboard-form a{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
     color: var(--base-oscuro);
     text-decoration: none;
     font-size: 14px;
@@ -583,4 +586,79 @@ input:focus{outline: none;}
 .product-card{
     display: flex;
     flex-direction: column;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.product-card p{
+    margin: 5px 0; 
+    font-size: 16px;
+}
+
+.product-card a, .btn-eliminar{
+    margin: 5px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--base-oscuro);
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid;
+    width: fit-content;
+}
+
+.product-card a:hover, .btn-eliminar:hover{
+    text-decoration: none;
+    background-color: var(--base-oscuro);
+    color: var(--blanco);
+    border: 1px solid var(--base-oscuro);
+}
+
+.btn-on {  
+    background: #00d54f;
+    height: 20px;
+    width: 30px;
+    border-radius: 50px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}  
+
+.btn-on::before {  
+    content: "";  
+    position: absolute;  
+    top: 2px;  
+    left: 2px;  
+    width: 16px;  
+    height: 16px;  
+    background: white;  
+    border-radius: 50%;  
+    transition: all 0.3s ease;  
+}
+
+.btn-off {  
+    background: #9b9b9b;
+    height: 20px;
+    width: 30px;
+    border-radius: 50px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+.btn-off::after {  
+    content: "";  
+    position: absolute;  
+    top: 2px;  
+    right: 2px;  
+    width: 16px;  
+    height: 16px;  
+    background: white;  
+    border-radius: 50%;  
+    transition: all 0.3s ease;   
 }

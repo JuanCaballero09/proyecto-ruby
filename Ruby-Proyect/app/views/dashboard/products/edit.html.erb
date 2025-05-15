@@ -26,12 +26,12 @@
     <%= form.collection_select :grupo_id, Grupo.all, :id, :nombre, selected: @product.grupo_id %>
   </div>
 
-  <div>
+  <div class="checkbox-container">
     <%= form.label :disponible %>
     <%= form.check_box :disponible, checked: @product.disponible %>
   </div>
 
   <%= form.submit "Actualizar Producto" %>
+  <%= link_to 'Volver', dashboard_products_path %>
 <% end %>
 
-<%= link_to 'Volver', dashboard_products_path %>
