@@ -21,7 +21,7 @@ input:focus{outline: none;}
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100dvh;
     align-items: center;
     background: linear-gradient(70deg, var(--base-claro),var(--base),var(--base-oscuro));
 }
@@ -245,7 +245,7 @@ input:focus{outline: none;}
     gap: 5px;
 }
 
-.vistas{min-height: 50vh;}
+.vistas{min-height: 50dvh;}
 
 .grupo {
     margin-top: 40px;
@@ -306,4 +306,281 @@ input:focus{outline: none;}
     height: 200px;
     border-radius: 5px;
 }
-  
+
+.dashboard-container {
+    display: flex;
+    min-height: 100dvh;
+    min-width: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    background-color: var(--base);
+    width: 220px;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    text-decoration: none;
+}
+
+.sidebar summary{
+    font-weight: bold;
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    padding-right: 1.5em;
+}
+
+.sidebar summary::-webkit-details-marker {
+  display: none;
+}
+
+.sidebar summary::after {
+  content: "▶"; /* o "▼" si está abierto */
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.9em;
+  transform: translateY(10%);
+  transition: transform 0.3s;
+}
+.sidebar details[open] summary::after {
+  transform: translateY(10%) rotate(90deg);
+}
+
+.sidebar details {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar details a{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.sidebar details a::before{
+    content: "•";
+    margin-right: 5px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--base);
+}
+
+.dashboard-grupo{
+    border: 1px solid #ccc;
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.dashboard-grupo div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.grupo-acciones{
+    justify-content: flex-end;
+}
+
+.grupo-acciones button,.grupo-acciones a{
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--base-oscuro);
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid;
+}
+
+
+.grupo-acciones button:hover,.grupo-acciones a:hover{
+    text-decoration: none;
+    background-color: var(--base-oscuro);
+    color: var(--blanco);
+    border: 1px solid var(--base-oscuro);
+}
+
+.dashboard-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard-form label {
+    margin: 0;
+    color: var(--base-oscuro);
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dashboard-form input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.dashboard-form textarea{
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+    min-height: 60px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.dashboard-form textarea:focus{outline: none;}
+
+.dashboard-form select{
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.checkbox-container {  
+    display: flex;  
+    align-items: center;
+    justify-content: center;  
+    gap: 10px;   
+    margin-bottom: 10px;
+}  
+
+.checkbox-container label {  
+    font-size: 16px;  
+    font-weight: bold;  
+    color: var(--base-oscuro); 
+    margin: 0;
+}  
+
+.checkbox-container input[type="checkbox"] {  
+    width: 20px;  
+    height: 20px;  
+    accent-color: var(--base);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;  
+}  
+
+.checkbox-container input[type="checkbox"]:checked {  
+    transform: scale(1.2); 
+}  
+
+.dashboard-form input[type="submit"]{
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--base-oscuro);
+    font-size: 18px;
+    padding: 5px 10px;
+    margin: 0;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid;
+    width: fit-content;
+}
+
+.dashboard-form input[type="submit"]:hover{
+    text-decoration: none;
+    background-color: var(--base-oscuro);
+    color: var(--blanco);
+    border: 1px solid var(--base-oscuro);
+}
+
+.dashboard-form a{
+    color: var(--base-oscuro);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dashboard-form a::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 1px;
+    background-color: var(--base-oscuro);
+    margin: 2px 0;
+    opacity: 0.5;
+}
+
+.dashboard-form a:hover::after{
+    width: 100%;
+    transition: width 0.3s;
+}
+
+.dashboard-form a:hover{
+    text-decoration: none;
+}
+
+.productss{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+}

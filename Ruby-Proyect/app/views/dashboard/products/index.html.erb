@@ -1,9 +1,26 @@
-<h1>Productos creados</h1>
+<h2>Lista de Productos</h2>
 
-<ul>
-    <% @products.each do |product|%>
-    <li><%= product.nombre %></li>
-    <% end %>
-</ul>
 
-<%= link_to "Crear un nuevo producto", new_dashboard_product_path %>
+
+<div class="productss">
+  <% @products.each do |product| %>
+    <div class="product-card">
+      <h3><%= product.nombre %></h3>
+      <p>id: <%= product.id %></p>
+      <p><%= product.descripcion %></p>
+      <p>Precio: $<%= product.precio %></p>
+
+      <div class="estado">
+        <% if product.disponible %>
+          <%= button_to 'ON', toggle_disponibilidad_dashboard_product_path(product), method: :patch, class: 'btn-on' %>
+        <% else %>
+          <%= button_to 'OFF', toggle_disponibilidad_dashboard_product_path(product), method: :patch, class: 'btn-off' %>
+        <% end %>
+      </div>
+
+      <%= link_to "Editar", edit_dashboard_product_path(product), class: "btn-editar" %>
+      <%= button_to "Eliminar", dashboard_product_path(product), method: :delete, data: { confirm: "¿Estás seguro de que quieres eliminar este producto?" }, class: "btn-eliminar" %>
+
+    </div>
+  <% end %>
+</div>

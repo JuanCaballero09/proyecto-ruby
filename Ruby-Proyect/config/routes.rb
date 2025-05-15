@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     root to: "devise/sessions#new"
   end
   
-  get "index", to: "pages#index"
+  get 'index', to: "pages#index"
   get 'carrito', to: 'pages#carrito', as: 'carrito' 
   get 'menu', to: 'pages#menu', as: 'menu'
 
@@ -14,9 +14,11 @@ Rails.application.routes.draw do
   namespace :dashboard do
     root to: "dashboard#index"
     resources :grupos, path: "grupos"
-    resources :products, path: "productos"
+    resources :products, path: "productos" do
+      member do 
+        patch :toggle_disponibilidad
+      end
+    end
   end
-
-
-
+  
 end

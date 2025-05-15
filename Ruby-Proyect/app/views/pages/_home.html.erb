@@ -1,71 +1,29 @@
-<div class="grupo">
-  <h2>Hamburguesas</h2>
-  <div class="slider-wrapper">
-    <button class="botonL" onclick="moverSlider('slider-hamburguesa', -1)">←</button>
-    <div class="slider-container" id="slider-hamburguesa">
-      <div class="carta">
-        <%= image_tag "Hamburgesas.png" %>
-        <h4>Hamburguesa 1</h4>
-      </div>
-      <div class="carta">
-        <%= image_tag "hamburguesas2.png" %>
-        <h4>Hamburguesa 2</h4>
-      </div>
-      <div class="carta">
-        <%= image_tag "Hamburgesas.png" %>
-        <h4>Hamburguesa 3</h4>
-      </div>
-    </div>
-    <button class="botonR" onclick="moverSlider('slider-hamburguesa', 1)">→</button>
-  </div>
-</div>
+<% if @grupos.present? %>
+  <% @grupos.each do |grupo| %>
+    <% productos_disponibles = grupo.products.select(&:disponible) %>
+    <% if productos_disponibles.any? %>
+      <div class="grupo">
+        <h2><%= grupo.nombre %></h2>
+        
+        <div class="slider-wrapper">
+          <button class="botonL" onclick="moverSlider('slider-<%= grupo.id %>', -1)">←</button>
 
-<div class="grupo">
-  <h2>Pizza</h2>
-  <div class="slider-wrapper">
-    <button class="botonL" onclick="moverSlider('slider-pizza', -1)">←</button>
-    <div class="slider-container" id="slider-pizza">
-        <div class="carta">
-            <%= image_tag "pizzas.png" %>
-            <h4>Pizza 1</h4>
+          <div class="slider-container" id="slider-<%= grupo.id %>">
+
+            <% productos_disponibles.each do |producto| %>
+              <div class="carta">
+                <%= image_tag "Hamburgesas.png" %>
+                <h4><%= producto.nombre %></h4>
+              </div>
+            <% end %>
+
+          </div>
+
+          <button class="botonR" onclick="moverSlider('slider-<%= grupo.id %>', 1)">→</button>
         </div>
-        <div class="carta">
-            <%= image_tag "pizzas2.png" %>
-            <h4>Pizza 2</h4>
-        </div>
-        <div class="carta">
-            <%= image_tag "pizzas.png" %>
-            <h4>Pizza 3</h4>
-        </div>
-        <div class="carta">
-            <%= image_tag "pizzas.png" %>
-            <h4>Pizza 3</h4>
-        </div>
-        <div class="carta">
-            <%= image_tag "pizzas.png" %>
-            <h4>Pizza 3</h4>
-        </div>
-        <div class="carta">
-            <%= image_tag "pizzas.png" %>
-            <h4>Pizza 3</h4>
-        </div>
-        <div class="carta">
-            <%= image_tag "pizzas.png" %>
-            <h4>Pizza 3</h4>
-        </div>
-        <div class="carta">
-            <%= image_tag "pizzas.png" %>
-            <h4>Pizza 3</h4>
-        </div>
-        <div class="carta">
-            <%= image_tag "pizzas.png" %>
-            <h4>Pizza 3</h4>
-        </div>
-        <div class="carta">
-            <%= image_tag "pizzas.png" %>
-            <h4>Pizza 3</h4>
-        </div>
-    </div>
-    <button class="botonR" onclick="moverSlider('slider-pizza', 1)">→</button>
-  </div>
-</div>
+      </div>
+    <% end %>
+  <% end %>
+<% else %>
+  <p>No hay grupos disponibles.</p>
+<% end %>
