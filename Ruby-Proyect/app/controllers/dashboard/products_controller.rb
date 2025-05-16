@@ -1,13 +1,26 @@
 class Dashboard::ProductsController < ApplicationController
+
+  layout 'dashboard' 
+
   before_action :authenticate_user!
   before_action :check_admin
 
   def index
-    @products = Product.all
+    @products = Product.order(:id)
   end
 
   def new
     @product = Product.new
+  end
+
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to dashboard_products_path, notice: "Producto eliminado exitosamente."
   end
 
   def create
@@ -20,10 +33,30 @@ class Dashboard::ProductsController < ApplicationController
     end
   end
 
+  def update
+    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      redirect_to dashboard_products_path, notice: "Producto actualizado"
+    else
+    render :edit
+    end
+  end
+
+  def toggle_disponibilidad
+    @product = Product.find(params[:id])
+    @product.update(disponible: !@product.disponible)
+    redirect_to dashboard_products_path, notice: "Estado actualizado"
+  end
+
+
   private
 
+  def set_product
+    @product = Product.find(params[:id])
+  end
+
   def product_params
-    params.require(:product).permit(:nombre, :descripcion, :precio, :grupo_id)
+    params.require(:product).permit(:nombre, :precio, :descripcion, :imagen, :grupo_id, :disponible)
   end
 
   def check_admin
@@ -31,4 +64,5 @@ class Dashboard::ProductsController < ApplicationController
       redirect_to root_path, alert: "No tienes acceso a esta página."
     end
   end
+
 end

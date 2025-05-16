@@ -1,11 +1,31 @@
-<h1>Nuevo Producto</h1>
+<h1>Nuevo producto</h1>
 
-<%= form_with model: @product, url: dashboard_products_path, local: true do |form|%>
-<div>
-    <%= form.label :nombre%><br>
-    <%= form.text_field :nombre%>
-</div>
-<div>
-    <%= form.submit "crear"%>
-</div>
+<%= form_with model: [:dashboard, @product], local: true, html: { class: "dashboard-form" } do |f| %>
+  <div>
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+  </div>
+  <div>
+    <%= f.label :precio %>
+    <%= f.number_field :precio, step: 0.01 %>
+  </div>
+  <div>
+    <%= f.label :descripcion %>
+    <%= f.text_area :descripcion %>
+  </div>
+  <div>
+    <%= f.label :grupo_id, "Grupo" %>
+    <%= f.collection_select :grupo_id, Grupo.all, :id, :nombre %>
+  </div>
+  <div>
+    <%= f.label :imagen %>
+    <%= f.text_field :imagen %>
+  </div>
+  <div class="checkbox-container">
+    <%= f.label :disponible %>
+    <%= f.check_box :disponible %>
+  </div>
+  <div>
+    <%= f.submit "Crear producto" %>
+  </div>
 <% end %>

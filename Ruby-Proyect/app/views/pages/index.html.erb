@@ -16,6 +16,9 @@
         <%= link_to "Inicio", root_path %>
         <%= link_to "Carrito", carrito_path %>
         <%= link_to "Menu", menu_path %>
+        <% if current_user.admin? %>
+            <%= link_to 'Panel de administración', dashboard_root_path %></li>
+        <% end %>
     </div>
    
     <div class="user">

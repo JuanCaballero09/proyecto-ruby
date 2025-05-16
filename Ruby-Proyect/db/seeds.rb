@@ -30,11 +30,27 @@ ActiveRecord::Base.connection.reset_pk_sequence!('products')
 
 puts "creando productos"
 Product.create(
-  nombre: "Hamburguesa con queso",
-  precio: 10.0,
-  descripcion: "Deliciosa hamburguesa con queso",
+  nombre: "Hamburguesa Sencilla Carne",
+  precio: 10000.0,
+  descripcion: "Deliciosa hamburguesa con Carne y queso",
   disponible: true,
   imagen: "https://example.com/hamburguesa.jpg",
   grupo_id: Grupo.find_by(nombre: "Hamburguesa").id
+)
+Product.create(
+  nombre: "Hamburguesa Sencilla Pollo",
+  precio: 11000.0,
+  descripcion: "Deliciosa hamburguesa con pollo y queso",
+  disponible: true,
+  imagen: "https://example.com/hamburguesa.jpg",
+  grupo_id: Grupo.find_by(nombre: "Hamburguesa").id
+)
+Product.create(
+  nombre: "Pizza Hawaiana",
+  precio: 20000.0,
+  descripcion: "Pizza con piña y jamón",
+  disponible: true,
+  imagen: "https://example.com/pizza.jpg",
+  grupo_id: Grupo.find_by(nombre: "Pizza").id
 )
 puts "Productos creados #{Product.count}"

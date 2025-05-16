@@ -1,9 +1,15 @@
-<h1>Grupos creados</h1>
+<h1>Grupos</h1>
 
-<ul>
-    <% @grupos.each do |grupo|%>
-    <li><%= grupo.nombre %></li>
-    <% end %>
-</ul>
-
-<%= link_to "Crear un nuevo grupo", new_dashboard_grupo_path %>
+<% @grupos.each do |grupo| %>
+  <div class="dashboard-grupo">
+    <div class="grupo-info">
+      <strong><%= grupo.nombre %></strong>
+      <p>/</p>
+      <p>Id: <%= grupo.id %></p>
+    </div>
+    <div class="grupo-acciones">
+      <%= link_to "Editar", edit_dashboard_grupo_path(grupo), class: "btn-editar" %>
+      <%= button_to "Eliminar", dashboard_grupo_path(grupo), method: :delete, data: { confirm: "¿Estás seguro de que quieres eliminar este Grupo?" }, class: "btn-eliminar" %>
+    </div>
+  </div>
+<% end %>
