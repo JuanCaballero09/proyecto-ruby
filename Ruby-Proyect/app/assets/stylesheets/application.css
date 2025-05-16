@@ -364,15 +364,13 @@ input:focus{outline: none;}
   transform: translateY(10%) rotate(90deg);
 }
 
-.sidebar details {
+.sidebar details a {
     display: flex;
-    flex-direction: column;
-}
-
-.sidebar details a{
+    flex-direction: row;
     margin-top: 5px;
     margin-left: 10px;
 }
+
 
 .sidebar details a::before{
     content: "•";
