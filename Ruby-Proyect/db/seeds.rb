@@ -34,7 +34,6 @@ Product.create(
   precio: 10000.0,
   descripcion: "Deliciosa hamburguesa con Carne y queso",
   disponible: true,
-  imagen: "https://example.com/hamburguesa.jpg",
   grupo_id: Grupo.find_by(nombre: "Hamburguesa").id
 )
 Product.create(
@@ -42,7 +41,6 @@ Product.create(
   precio: 11000.0,
   descripcion: "Deliciosa hamburguesa con pollo y queso",
   disponible: true,
-  imagen: "https://example.com/hamburguesa.jpg",
   grupo_id: Grupo.find_by(nombre: "Hamburguesa").id
 )
 Product.create(
@@ -50,7 +48,6 @@ Product.create(
   precio: 20000.0,
   descripcion: "Pizza con piña y jamón",
   disponible: true,
-  imagen: "https://example.com/pizza.jpg",
   grupo_id: Grupo.find_by(nombre: "Pizza").id
 )
 puts "Productos creados #{Product.count}"

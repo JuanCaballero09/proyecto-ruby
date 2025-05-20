@@ -215,6 +215,11 @@ input:focus{outline: none;}
     border: 1px solid ;
     padding: 5px 10px;
     border-radius: 20px;
+    transition: background-color 0.3s cubic-bezier(0, 0, 0.45, 1);
+}
+
+.links a:hover{
+    background-color: white;
 }
 
 .buscador input{
