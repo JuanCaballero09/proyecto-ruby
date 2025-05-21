@@ -25,6 +25,21 @@ Rails.application.configure do
     config.action_controller.perform_caching = false
   end
 
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.sendgrid.net',
+    port:                 587,
+    domain:               'localhost:3000',  # o tu dominio si ya tienes uno
+    user_name:            'apikey',     # literalmente esta palabra
+    password:             ENV['SENDGRID_API_KEY'], # la clave que generaste
+    authentication:       :plain,
+    enable_starttls_auto: true
+  }
+
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+
   # Change to :null_store to avoid any caching.
   config.cache_store = :memory_store
 
