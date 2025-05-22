@@ -28,16 +28,16 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address =>          'smtp.sendgrid.net',
-    :port =>              587,
-    :domain =>              'localhost',  # o tu dominio si ya tienes uno
-    :user_name =>            'apikey',     # literalmente esta palabra
-    :password =>           ENV['SENDGRID_API_KEY'], # la clave que generaste
-    :authentication =>       :plain,
+    :address =>          'smtp.sendgrid.net', # server encar gado de hacer el mandado de correos
+    :port =>              587, # puerto en donde van a salir
+    :domain =>              'localhost',  
+    :user_name =>            'apikey',    # nombre de la api 
+    :password =>           ENV['SENDGRID_API_KEY'],  # contraseña
+    :authentication =>       OAuth 2.0:,  # Metodo de seguridad
     :enable_starttls_auto => true
   }
 
-config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 } # medio de que se muestre por la local
 
 
   # Change to :null_store to avoid any caching.
