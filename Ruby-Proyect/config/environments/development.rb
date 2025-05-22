@@ -33,7 +33,7 @@ Rails.application.configure do
     :domain =>              'localhost',  
     :user_name =>            'apikey',    # nombre de la api 
     :password =>           ENV['SENDGRID_API_KEY'],  # contraseña
-    :authentication =>       OAuth 2.0:,  # Metodo de seguridad
+    :authentication =>       :plain,  # Metodo de seguridad
     :enable_starttls_auto => true
   }
 
