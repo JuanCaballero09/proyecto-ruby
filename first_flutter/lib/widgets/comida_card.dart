@@ -9,7 +9,7 @@ class ComidaCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.pink[100], // salmón
+      color: const Color.fromARGB(255, 246, 200, 75), // salmón
       margin: const EdgeInsets.all(10),
       child: ListTile(
         title: Text(
