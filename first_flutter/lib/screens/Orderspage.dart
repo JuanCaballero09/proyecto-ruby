@@ -12,6 +12,7 @@ class OrdersPage extends StatelessWidget {
       ),
       body: Center(
         child: const Text('Aquí estarán tus Pedidos'),
+        
       ),
     );
   }
