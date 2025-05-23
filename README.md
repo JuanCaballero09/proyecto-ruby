@@ -28,7 +28,7 @@ Este repositorio contiene el desarrollo de un sistema completo compuesto por:
 │   ├── ios/
 │   └── ...
 ├── docs/               # Documentación técnica en HTML
-│   ├── PDF/
+│   ├── documents/
 │   ├── views/
 │   ├── index.html
 │   └── ...
