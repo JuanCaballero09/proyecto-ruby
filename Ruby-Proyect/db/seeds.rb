@@ -6,9 +6,9 @@ Product.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('grupos')
 
 puts "creando grupos"
-Grupo.create(nombre: "Hamburguesa")
-Grupo.create(nombre: "Pizza")
-Grupo.create(nombre: "Salchipapa")
+Grupo.create(nombre: "Grupo 1")
+Grupo.create(nombre: "Grupo 2")
+Grupo.create(nombre: "Grupo 3")
 puts "Grupos creados #{Grupo.count}"
 
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
@@ -30,24 +30,116 @@ ActiveRecord::Base.connection.reset_pk_sequence!('products')
 
 puts "creando productos"
 Product.create(
-  nombre: "Hamburguesa Sencilla Carne",
-  precio: 10000.0,
-  descripcion: "Deliciosa hamburguesa con Carne y queso",
+  nombre: "Producto 1",
+  precio: 9900.0,
+  descripcion: "Descripción del producto 1",
   disponible: true,
-  grupo_id: Grupo.find_by(nombre: "Hamburguesa").id
+  grupo_id: Grupo.find_by(nombre: "Grupo 1").id
 )
 Product.create(
-  nombre: "Hamburguesa Sencilla Pollo",
-  precio: 11000.0,
-  descripcion: "Deliciosa hamburguesa con pollo y queso",
+  nombre: "Producto 2",
+  precio: 99900.0,
+  descripcion: "Descripción del producto 2",
   disponible: true,
-  grupo_id: Grupo.find_by(nombre: "Hamburguesa").id
+  grupo_id: Grupo.find_by(nombre: "Grupo 1").id
 )
 Product.create(
-  nombre: "Pizza Hawaiana",
-  precio: 20000.0,
-  descripcion: "Pizza con piña y jamón",
+  nombre: "Producto 3",
+  precio: 900.0,
+  descripcion: "Descripción del producto 3",
   disponible: true,
-  grupo_id: Grupo.find_by(nombre: "Pizza").id
+  grupo_id: Grupo.find_by(nombre: "Grupo 1").id
 )
+Product.create(
+  nombre: "Producto 4",
+  precio: 9999.0,
+  descripcion: "Descripción del producto 4",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 1").id
+)
+Product.create(
+  nombre: "Producto 5",
+  precio: 9999.0,
+  descripcion: "Descripción del producto 5",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 1").id
+)
+
+
+
+Product.create(
+  nombre: "Producto 1",
+  precio: 9900.0,
+  descripcion: "Descripción del producto 1",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 2").id
+)
+Product.create(
+  nombre: "Producto 2",
+  precio: 99900.0,
+  descripcion: "Descripción del producto 2",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 2").id
+)
+Product.create(
+  nombre: "Producto 3",
+  precio: 900.0,
+  descripcion: "Descripción del producto 3",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 2").id
+)
+Product.create(
+  nombre: "Producto 4",
+  precio: 9999.0,
+  descripcion: "Descripción del producto 4",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 2").id
+)
+Product.create(
+  nombre: "Producto 5",
+  precio: 9999.0,
+  descripcion: "Descripción del producto 5",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 2").id
+)
+
+
+
+Product.create(
+  nombre: "Producto 1",
+  precio: 9900.0,
+  descripcion: "Descripción del producto 1",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 3").id
+)
+Product.create(
+  nombre: "Producto 2",
+  precio: 99900.0,
+  descripcion: "Descripción del producto 2",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 3").id
+)
+Product.create(
+  nombre: "Producto 3",
+  precio: 900.0,
+  descripcion: "Descripción del producto 3",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 3").id
+)
+Product.create(
+  nombre: "Producto 4",
+  precio: 9999.0,
+  descripcion: "Descripción del producto 4",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 3").id
+)
+
+Product.create(
+  nombre: "Producto 5",
+  precio: 9999.0,
+  descripcion: "Descripción del producto 5",
+  disponible: true,
+  grupo_id: Grupo.find_by(nombre: "Grupo 3").id
+)
+
 puts "Productos creados #{Product.count}"

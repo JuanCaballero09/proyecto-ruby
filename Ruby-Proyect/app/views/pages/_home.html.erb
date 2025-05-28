@@ -13,7 +13,7 @@
           <div class="slider-container" id="slider-<%= grupo.id %>">
             <% productos_disponibles.each do |producto| %>
               <div class="carta">
-                <%= image_tag(producto.imagen.attached? ? producto.imagen : "default_img_product.png") %>
+                <%= image_tag(producto.imagen.attached? ? producto.imagen : "LogoLogoText2.svg") %>
                 <h4><%= producto.nombre %></h4>
               </div>
             <% end %>
