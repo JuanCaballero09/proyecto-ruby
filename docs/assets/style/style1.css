@@ -111,6 +111,10 @@ body{
     transform: translateX(0);
 }
 
+.logo{
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 86, 34, 0.8)
+}
 
 @media (max-width: 768px){
     .nav-link {display: none;}
