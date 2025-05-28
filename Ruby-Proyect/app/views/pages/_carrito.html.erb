@@ -1,51 +1,49 @@
-<div class = "section-carrito">
-        <h3 class = "name-cart" >Mi carrito</h3>
+<div class="section-carrito">
+    <div class="name-cart">
+        <h3>Mi carrito</h3>
+    </div>
 
-            <div class ="imagen-cart" >
-                <%= image_tag "default_img_product.png"%>
-                <%= image_tag "default_img_product.png"%>
-            </div>
-            
-            <table class="cart-items-table">
-                <thead>
-                    <tr>
-                        <th>Comida</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="item-cart">
-                                <span>Salchipapa sencilla</span>
-                            </div>
-                        </td>
-                        <td>12.000</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="item-details">
-                                <span>Perro sencillo</span>
-                            </div>
-                        </td>
-                        <td>6.000</td>
-                        <td>1</td>
-                    </tr>
-                </tbody>
-            </table>
+    <table class="cart-items-table">
+        <thead>
+            <tr>
+                <th>Comida</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="item-details">
+                        <%= image_tag "default_img_product.png", class: "product-thumbnail" %>
+                        <span>Salchipapa sencilla</span>
+                    </div>
+                </td>
+                <td>12.000</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="item-details">
+                        <%= image_tag "default_img_product.png", class: "product-thumbnail" %>
+                        <span>Perro sencillo</span>
+                    </div>
+                </td>
+                <td>6.000</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
 
-            <div class="cart-location">
-                <label for="ubicacion">Ubicación</label>
-                <input type="text" id="ubicacion" value="Calle 30 #76-225">
-            </div>
+    <div class="cart-location">
+        <label for="ubicacion">Ubicación</label>
+        <input type="text" id="ubicacion" value="Calle 30 #76-225">
+    </div>
 
-            <div class="cart-total">
-                <span>Total a pagar</span>
-                <span class="total-amount">18.000</span>
-            </div>
+    <div class="cart-total">
+        <span>Total a pagar</span>
+        <span class="total-amount">18.000</span>
+    </div>
 
-            <button class="order-button">Pedir</button>
+    <button class="order-button">Pedir</button>
 </div>
-
