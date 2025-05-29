@@ -1,11 +1,11 @@
 
 :root {
-    --base: #fec104;
-    --base-oscuro: #f9a800;
-    --base-claro: #f5d03a;
+    --base: #ED5821;
+    --base-oscuro: #9D2E06;
+    --base-claro: #FF936B;
     --naranja: #ff6f00;
-    --blanco: #ffffff;
-    --negro: #333333;
+    --blanco: #FFE0D6;
+    --negro: #802400;
 }
 
 html,body{
@@ -47,9 +47,9 @@ input:focus{outline: none;}
     display: flex;
     flex-direction: column;
     padding: 18px;
-    border: 1px solid #ccc;
+
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: var(--base-claro);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 400px;
@@ -70,13 +70,15 @@ input:focus{outline: none;}
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    background-color: var(--blanco);
 }
 
 .session-form input[type="submit"]{
-    background-color: #007bff;
+    background-color: var(--base);
     color: white;
     border: none;
+    font-weight: bold;
     margin: 0 auto 15px auto;
     padding: 7px 10px ;
     border-radius: 5px;
@@ -84,11 +86,12 @@ input:focus{outline: none;}
 }
 
 .session-form input[type="submit"]:hover{
-    background-color: #0056b3;
+    background-color: var(--base-oscuro);
 }
 
 .session-form a{
-    color: #007bff;
+    color: white;
+    font-weight: bold;
     text-decoration: none;
     margin: 6px 0;
 }
@@ -132,14 +135,13 @@ input:focus{outline: none;}
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    background-color: var(--base);
+    height: 25dvh;
+    background-color: white;
 }
 .header h1{
     margin: 0;
     font-size: 55px;
     font-stretch: extra-expanded;
-    text-shadow: 0px 0px 5px rgb(0, 0, 0);
-    color: var(--blanco);
 }
 
 .header img{
@@ -154,11 +156,13 @@ input:focus{outline: none;}
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 10px;
-    background-color: var(--base-oscuro);
+    padding: 10px 15px;
+    background-color: var(--base-claro);
+    margin: 0 15px;
+    border-radius: 45px;
     position: sticky;
-    top: 0;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    top: 2px;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 
@@ -212,7 +216,7 @@ input:focus{outline: none;}
 }
 
 .links a:hover{
-    background-color: white;
+    background-color: var(--blanco);
 }
 
 .buscador input{
@@ -677,6 +681,11 @@ input:focus{outline: none;}
     border-radius: 50%;  
     transition: all 0.3s ease;   
 }
+
+#products-list ul{
+    max-height: 150px; /* Ajusta la altura según necesites */
+    overflow-y: auto;
+    padding-right: 10px; /* Opcional: espacio para la barra de scroll */
 
 /* Carrito */
 
