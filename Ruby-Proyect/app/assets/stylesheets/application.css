@@ -677,3 +677,141 @@ input:focus{outline: none;}
     border-radius: 50%;  
     transition: all 0.3s ease;   
 }
+
+/* Carrito */
+
+/* Contenedor principal del carrito */
+.section-carrito {
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* Encabezado del carrito */
+.name-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.name-cart h3 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Tabla de los contenidos  */
+.cart-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.cart-items-table th,
+.cart-items-table td {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-items-table th {
+    background-color: #f2f2f2;
+    font-weight: normal;
+    color: #555;
+    text-align: left;
+}
+
+.cart-items-table td:nth-child(2),
+.cart-items-table td:nth-child(3) {
+    text-align: right;
+}
+
+
+.item-details {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+
+.product-thumbnail {
+    width: 120px; 
+    height: 120px;
+    object-fit: cover; 
+    border-radius: 4px; 
+    border: 1px solid #ddd; 
+}
+
+
+.cart-location {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.cart-location label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cart-location input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #000;
+}
+
+.total-amount {
+    color: #d9534f;
+}
+
+.order-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 20px;
+    width: 150px;
+    border: 1px solid #000;
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #45a049;
+}
