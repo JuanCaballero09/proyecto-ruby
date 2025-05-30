@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   #devise modules
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :confirmable # Esto genera un token confirmación del correo.
 
   #roles con enum
   enum :rol, { cliente: 0, empleado: 1, admin: 2 }
@@ -20,3 +21,8 @@ class User < ApplicationRecord
   validates :apellido, presence: true
   validates :telefono, presence: true
 end
+
+
+def active_for_authentication? # Esto permite iniciar sesion si el usuario esta confirmado.
+  super && (confirmed? || admin?) # Esto me permite verificar si el usuario fue creado si es admin o empleado o hasta un cliente
+end 

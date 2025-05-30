@@ -19,8 +19,9 @@ User.create(
   password: "rasdix-jePjor-kohsy6",
   nombre: "Admin",
   apellido: "Admin",
-  telefono: "123456789",
-  rol: :admin
+  telefono: "123456789",  
+  rol: :admin,
+  confirmed_at: Time.current # Encargado de que si el correo esta verificado lo puede dejar entrar
 )
 
 puts "Usuarios creados #{User.count}"
