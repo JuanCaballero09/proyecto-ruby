@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   #devise modules
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :confirmable
 
   #roles con enum
   enum :rol, { cliente: 0, empleado: 1, admin: 2 }

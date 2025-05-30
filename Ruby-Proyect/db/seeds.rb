@@ -20,7 +20,8 @@ User.create(
   nombre: "Admin",
   apellido: "Admin",
   telefono: "123456789",
-  rol: :admin
+  rol: :admin,
+  confirmed_at: Time.current
 )
 
 puts "Usuarios creados #{User.count}"
