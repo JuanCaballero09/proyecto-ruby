@@ -19,7 +19,7 @@ User.create(
   password: "rasdix-jePjor-kohsy6",
   nombre: "Admin",
   apellido: "Admin",
-  telefono: "123456789",  
+  telefono: "123456789",
   rol: :admin,
   confirmed_at: Time.current # Encargado de que si el correo esta verificado lo puede dejar entrar
 )
@@ -67,7 +67,6 @@ Product.create(
 )
 
 
-
 Product.create(
   nombre: "Producto 1",
   precio: 9900.0,
@@ -105,7 +104,6 @@ Product.create(
 )
 
 
-
 Product.create(
   nombre: "Producto 1",
   precio: 9900.0,
@@ -134,7 +132,6 @@ Product.create(
   disponible: true,
   grupo_id: Grupo.find_by(nombre: "Grupo 3").id
 )
-
 Product.create(
   nombre: "Producto 5",
   precio: 9999.0,
