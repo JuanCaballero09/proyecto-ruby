@@ -15,7 +15,6 @@
     <div class="links">
         <%= link_to "Inicio", root_path %>
         <%= link_to "Carrito", carrito_path %>
-        <%= link_to "Menu", menu_path %>
         <% if current_user.admin? %>
             <%= link_to 'Panel de administración', dashboard_root_path %></li>
         <% end %>
@@ -23,13 +22,16 @@
    
     <div class="user">
         <%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete, form: { "data-turbo-confirm": "¿Estás seguro que quieres cerrar sesión?" } %>
-        <%= image_tag "icons/user-solid.svg" %>
+        <%= link_to edit_path do %>
+            <%= image_tag "icons/user-solid.svg", alt: "Perfil" %>
+        <% end %>
     </div>
 </nav>
 
 <main class="vistas">
 
-    <%= render partial: @seccion if @seccion.present? %>
+    <%= render partial: @seccion, locals: { resource: @resource, resource_name: @resource_name, devise_mapping: Devise.mappings[:user] } if @seccion.present? %>
+
 
 </main>
 
