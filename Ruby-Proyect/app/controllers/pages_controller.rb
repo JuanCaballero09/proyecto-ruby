@@ -3,8 +3,6 @@ class PagesController < ApplicationController
 
   def index
     @seccion = params[:seccion] || "home"
-
-    @grupos = Grupo.includes(:products)
   end
 
   def home
@@ -19,6 +17,11 @@ class PagesController < ApplicationController
     render :index
   end
 
+  def menu
+    @seccion = "menu"
+    @grupos = Grupo.includes(:products)
+    render :index
+  end
 
   def carrito
     @seccion = "carrito"
