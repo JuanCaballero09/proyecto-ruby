@@ -1,1 +1,46 @@
-<h1>Hola</h1>
+<section class="home">
+    <%= image_tag 'LogoLogoText2.svg', alt: 'Anuncio', class: 'anuncio' %>
+    <h2>¡ Pide tu comida favorita con un click !</h2>
+    <div class="grupos">
+        <% @grupos.each do |grupo| %>
+            <% productos_disponibles = grupo.products.select(&:disponible) %>
+            <% if productos_disponibles.any? %>
+                <a href="#", class="grupo-carta">
+                    <%= image_tag 'LogoLogo.svg' %>
+                    <h3><%= grupo.nombre %></h3>
+                </a>
+            <% end %>
+        <% end %>
+    </div>
+    <h2> 🔥 Promociones de Dia</h2>
+    <div class="promociones">            
+        <div class="promo">
+            <%= image_tag 'LogoLogoAPP.svg', alt: 'comida', width: 200 %>
+            <div>
+                <h3>Combo Pollo - $19.900</h3>
+                <button>Pedir Ahora</button>
+            </div>
+        </div>
+        <div class="promo">
+            <%= image_tag 'LogoLogoAPP.svg', alt: 'comida', width: 200 %>
+            <div>
+                <h3>2x1 Hamburguesas</h3>
+                <button>Pedir Ahora</button>
+            </div>
+        </div>
+                    <div class="promo">
+            <%= image_tag 'LogoLogoAPP.svg', alt: 'comida', width: 200 %>
+            <div>
+                <h3>Combo Pollo - $19.900</h3>
+                <button>Pedir Ahora</button>
+            </div>
+        </div>
+        <div class="promo">
+            <%= image_tag 'LogoLogoAPP.svg', alt: 'comida', width: 200 %>
+            <div>
+                <h3>2x1 Hamburguesas</h3>
+                <button>Pedir Ahora</button>
+            </div>
+        </div>
+    </div>
+</section>

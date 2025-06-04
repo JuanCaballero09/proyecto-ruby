@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!
 
   def index
     @seccion = params[:seccion] || "home"
+    @grupos = Grupo.all
   end
 
   def home
