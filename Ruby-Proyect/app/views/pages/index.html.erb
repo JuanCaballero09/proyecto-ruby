@@ -1,31 +1,47 @@
 <header class="header">
-    <h1>Bitevia Software</h1>
-    <%= image_tag "LogoLogo.svg" %>
-</header>
-
-<nav class="navbar">
-
+    <div class="logo">
+        <%= image_tag "LogoLogo.svg" %>
+        <h1>Bitevia Software</h1>
+    </div>
     <div class="buscador">
-
         <input type="search" name="barra_busquedad">
         <button type="submit">
             <%= image_tag "icons/magnifying-glass-solid.svg" %>
         </button>
     </div>
+</header>
+
+<nav class="navbar">
+
     <div class="links">
+
         <%= link_to "Inicio", root_path %>
+        <%= link_to "Menú", menu_path %>
         <%= link_to "Carrito", carrito_path %>
-        <% if current_user.admin? %>
-            <%= link_to 'Panel de administración', dashboard_root_path %></li>
+        
+        <% if current_user %>
+            <% if current_user.admin? %>
+                <%= link_to 'Panel de administración', dashboard_root_path %></li>
+            <% end %>
         <% end %>
     </div>
    
-    <div class="user">
-        <%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete, form: { "data-turbo-confirm": "¿Estás seguro que quieres cerrar sesión?" } %>
-        <%= link_to edit_path do %>
-            <%= image_tag "icons/user-solid.svg", alt: "Perfil" %>
-        <% end %>
-    </div>
+    <% if current_user %>
+        <div class="user">
+            <%= link_to edit_path do %>
+                <%= image_tag "icons/user-solid.svg", alt: "Perfil" %>
+            <% end %>
+            <div class="btn-user">
+                <%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete, form: { "data-turbo-confirm": "¿Estás seguro que quieres cerrar sesión?" } %>
+            </div>
+        </div>
+    <% else %>
+        <div class="user">
+            <div class="btn-user">
+            <%= button_to "Iniciar Sesión", new_user_session_path %>
+            </div>
+        </div>
+    <% end %>
 </nav>
 
 <main class="vistas">
@@ -36,16 +52,18 @@
 </main>
 
 <footer class="footer">
+
     <div class="social">
-    <a href="https://www.instagram.com/laterrazadelpri?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+      <a href="#">
         <%= image_tag "icons/instagram-brands.svg" %>
-    </a>
-    <a href="https://wa.me/573113678033" target="_blank">
+      </a>
+      <a href="#">
         <%= image_tag "icons/whatsapp-brands.svg" %>
-    </a>
-    <a href="https://www.tiktok.com/@laterrazadelpri?is_from_webapp=1&sender_device=pc" target="_blank">
+      </a>
+      <a href="#">
         <%= image_tag "icons/tiktok-brands.svg" %>
-    </a>
+      </a>
     </div>
-    <p>© 2023 La Terraza del Pri. Todos los derechos reservados.</p>
+    <p>© 2025 Bitevia Software. Todos los derechos reservados.</p>
+
 </footer>

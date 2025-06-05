@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
 
-  devise_scope :user do
-    root to: "devise/sessions#new"
-  end
+  devise_for :users, controllers: { registrations: 'users/registrations' }
 
-  get "index", to: "pages#index"
+
+  root to: "pages#index"
   get "carrito", to: "pages#carrito", as: "carrito"
   get "editar", to: "pages#edit", as: "edit"
-
+  get "menu", to: "pages#menu", as: "menu"
 
   namespace :dashboard do
     root to: "dashboard#index"

@@ -1,10 +1,8 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!
 
   def index
     @seccion = params[:seccion] || "home"
-
-    @grupos = Grupo.includes(:products)
+    @grupos = Grupo.all
   end
 
   def home
@@ -19,6 +17,11 @@ class PagesController < ApplicationController
     render :index
   end
 
+  def menu
+    @seccion = "menu"
+    @grupos = Grupo.includes(:products)
+    render :index
+  end
 
   def carrito
     @seccion = "carrito"
