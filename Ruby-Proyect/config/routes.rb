@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "carrito", to: "pages#carrito", as: "carrito"
   get "editar", to: "pages#edit", as: "edit"
   get "menu", to: "pages#menu", as: "menu"
+  get 'product/:nombre', to: 'pages#productos', as: 'productos_por_grupo'
 
   namespace :dashboard do
     root to: "dashboard#index"
