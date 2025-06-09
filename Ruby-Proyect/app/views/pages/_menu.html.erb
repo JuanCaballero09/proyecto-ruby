@@ -2,7 +2,7 @@
 
 <% if productos_existentes %>
   <% @grupos.each do |grupo| %>
-    <% productos_disponibles = grupo.products.select(&:disponible) %>
+    <% productos_disponibles = grupo.products.where(disponible: true).order(id: :asc) %>
     <% if productos_disponibles.any? %>
       <div class="grupo">
         <h2><%= grupo.nombre %></h2>
@@ -15,7 +15,8 @@
               <div class="carta">
                 <%= image_tag(producto.imagen.attached? ? producto.imagen : "LogoLogoText2.svg") %>
                 <h4><%= producto.nombre %></h4>
-                
+                <p><strong><%= number_to_currency(producto.precio, unit: "COP ", separator: ",", delimiter: ".", precision: 0) %> $</strong></p>
+
               </div>
             <% end %>
           </div>
@@ -27,7 +28,7 @@
   <% end %>
 <% else %>
   <div class="sin-productos">
-    <%= image_tag "sin_productos.png", alt: "Producto No Disponible" %>
+    <%= image_tag "ProductoNoDisponible.png", alt: "Producto No Disponible" %>
     <h2>No hay productos disponibles por ahora.</h2>
   </div>
 <% end %>

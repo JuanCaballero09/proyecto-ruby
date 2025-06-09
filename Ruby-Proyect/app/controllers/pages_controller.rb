@@ -10,6 +10,14 @@ class PagesController < ApplicationController
     render :index
   end
 
+  def productos
+    @seccion = "productos"
+    nombre_param = params[:nombre].tr("-", " ")
+    @grupo = Grupo.find_by("LOWER(nombre) = ?", nombre_param.downcase)
+    @productos = @grupo.products.where(disponible: true).order(id: :asc)
+    render :index
+  end
+
   def edit
     @seccion = "edit"
     @resource = current_user

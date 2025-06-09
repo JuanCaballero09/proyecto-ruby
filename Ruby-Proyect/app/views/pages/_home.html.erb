@@ -5,7 +5,7 @@
         <% @grupos.each do |grupo| %>
             <% productos_disponibles = grupo.products.select(&:disponible) %>
             <% if productos_disponibles.any? %>
-                <a href="#", class="grupo-carta">
+                <a href="<%= productos_por_grupo_path(grupo.nombre.parameterize) %>", class="grupo-carta">
                     <%= image_tag 'LogoLogo.svg' %>
                     <h3><%= grupo.nombre %></h3>
                 </a>

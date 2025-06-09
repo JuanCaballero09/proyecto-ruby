@@ -9,7 +9,7 @@
 }
 
 html,body{
-    background:-webkit-linear-gradient(45deg, #fdebe5,#f8a78a);
+    background:-webkit-linear-gradient(45deg, #fdfcfb,#ffcebd);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     min-height: 100dvh;
     margin: 0;
@@ -73,7 +73,7 @@ input:focus{outline: none;}
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: var(--blanco);
+    background-color: white;
 }
 
 .session-form input[type="submit"]{
@@ -407,6 +407,10 @@ input:focus{outline: none;}
     margin-top: 40px;
 }
 
+.grupo h2{
+    margin: .5em;
+}
+
 .slider-wrapper {
     position: relative;
     overflow: hidden;
@@ -441,7 +445,7 @@ input:focus{outline: none;}
 .botonR { right: 10px; }
 
 .carta {
-    min-width: 200px;
+    width: 325px;
     flex: 0 0 auto;
     background: white;
     border-radius: 15px;
@@ -459,8 +463,23 @@ input:focus{outline: none;}
 .carta img {
     object-fit: cover;
     width: 300px;
-    height: 200px;
+    height: 180px;
     border-radius: 5px;
+}
+
+.cartas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); ;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+}
+
+.cartas .carta:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+
 }
 
 /* Dashboard */
