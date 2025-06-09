@@ -9,8 +9,6 @@ Rails.application.routes.draw do
   get "menu", to: "pages#menu", as: "menu"
   get 'product/:nombre', to: 'pages#productos', as: 'productos_por_grupo'
 
-
-
   namespace :dashboard do
     root to: "dashboard#index"
     resources :grupos, path: "grupos"
