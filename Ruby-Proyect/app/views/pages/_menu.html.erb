@@ -14,9 +14,10 @@
             <% productos_disponibles.each do |producto| %>
               <div class="carta">
                 <%= image_tag(producto.imagen.attached? ? producto.imagen : "LogoLogoText2.svg") %>
-                <h4><%= producto.nombre %></h4>
+                <h4><%= producto.nombre %></h4> 
                 <p><strong><%= number_to_currency(producto.precio, unit: "COP ", separator: ",", delimiter: ".", precision: 0) %> $</strong></p>
-
+                <button class = "boton-mandar-carrito">Mandar al carrito</button>
+                <button class = "boton-pedir-ahora">Pedir ahora</button>
               </div>
             <% end %>
           </div>

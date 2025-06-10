@@ -1019,3 +1019,14 @@ input:focus{outline: none;}
 .edit button:hover{background-color: var(--base-oscuro);}
 
 .edit .session-form{width: 100%;}
+
+
+.boton-mandar-carrito{
+    border-radius: 20px;
+    background-color: #FF936B;
+}
+
+.boton-pedir-ahora{
+    border-radius: 20px;
+    background-color: #FF936B;
+}
