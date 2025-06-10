@@ -10,12 +10,13 @@
                 <th>Comida</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
+                <th>Eliminar</th>
             </tr>
         </thead>
         <tbody>
             <% total = 0%>
             <% @carrito.each do |item| %>
-                <% subtotal = item["Precio"].to_f * item ["Cantidad"].to_i %>
+                <% subtotal = item["precio"].to_f * item ["cantidad"].to_i %>
                 <% total += subtotal%>
                 <tr>
                     <td>

@@ -59,7 +59,7 @@ class PagesController < ApplicationController
     redirect_to carrito_path, notice: "Producto agregado al carrito." 
   end
 
-  def eliminar_carrito
+  def eliminar_del_carrito
     producto_id = params[:producto_id].to_i
     session[:carrito] ||= []
     session[:carrito].delete_if {|item| item["id"] == producto_id }
