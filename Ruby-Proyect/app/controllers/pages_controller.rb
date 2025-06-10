@@ -38,24 +38,33 @@ class PagesController < ApplicationController
     render :index
   end
 
-  def agregar carrito
-    session[:carrito] ||= []
-    
-    producto_id = params[:producto_id].to_i
-    producto = products-find(producto_id)
+  def agregar_al_carrito
+     session[:carrito] ||= []
 
-    item = session[:carrito].find {|i| i{id} == producto_id}
+  producto_id = params[:producto_id].to_i
+  producto = Product.find(producto_id)
 
+  item = session[:carrito].find { |i| i["id"] == producto_id }
 
-    if item 
-      item[:cantidad] += 1
-    else
-      session[:cantidad] << {
-        id: producto_id,
-        nombre: producto.nombre,
-        precio: producto.precio,
-        cantidad: 1
-      }
-      redirect_back fallback_location: root_path, notice: "El producto fue agregado al Carrito."
+  if item
+    item["cantidad"] = (item["cantidad"] || 0) + 1
+  else
+    session[:carrito] << {
+      "id" => producto.id,
+      "nombre" => producto.nombre,
+      "precio" => producto.precio,
+      "cantidad" => 1
+    }
+    end
+    redirect_to carrito_path, notice: "Producto agregado al carrito." 
   end
+
+  def eliminar_carrito
+    producto_id = params[:producto_id].to_i
+    session[:carrito] ||= []
+    session[:carrito].delete_if {|item| item["id"] == producto_id }
+
+    redirect_to carrito_path, notice: "Producto eliminado del carrito."
+  end
+
 end

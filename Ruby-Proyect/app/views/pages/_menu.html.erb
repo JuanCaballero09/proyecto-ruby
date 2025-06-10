@@ -16,7 +16,10 @@
                 <%= image_tag(producto.imagen.attached? ? producto.imagen : "LogoLogoText2.svg") %>
                 <h4><%= producto.nombre %></h4> 
                 <p><strong><%= number_to_currency(producto.precio, unit: "COP ", separator: ",", delimiter: ".", precision: 0) %> $</strong></p>
-                <button class = "boton-mandar-carrito">Mandar al carrito</button>
+                <%= form_with url: agregar_al_carrito_path, method: :post do %>
+                  <%= hidden_field_tag :producto_id, producto.id %>
+                  <%= submit_tag "Mandar al carrito", class: "boton-mandar-carrito"%>
+                <% end %>
                 <button class = "boton-pedir-ahora">Pedir ahora</button>
               </div>
             <% end %>
