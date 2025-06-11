@@ -5,6 +5,8 @@ import 'bloc/product_bloc.dart';
 import 'repository/product_repository.dart';
 import 'repository/http_product_repository.dart';
 import 'pages/product_page.dart';
+import 'pages/login_page.dart';
+import 'pages/auth_service.dart';
 
 void main() {
   const String apiUrl = 'https://run.mocky.io/v3/a667541a-2e6f-4de8-9431-d62ce7ffa590';
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocProvider(
         create: (_) => ProductBloc(repository),
-        child: const ProductPage(),
+        child: const LoginPage(),
       ),
     );
   }
