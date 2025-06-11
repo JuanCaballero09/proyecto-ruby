@@ -66,19 +66,11 @@ class PagesController < ApplicationController
     redirect_to carrito_path, notice: "Producto eliminado del carrito."
   end
 
-  def crear
-    pedido = Pedido.new(
-      producto_id: params[:producto_id],
-      nombre: params[:nombre],
-      apellido: params[:apellido],
-      direccion: params[:direccion],
-      telefono: params[:telefono]
-    )
+  def formulario
+     @producto = Product.find_by(id: params[:producto_id]) 
 
-    if pedido.save
-      redirect_to root_path, notice: 'Pedido realizado con éxito'
-    else 
-      redirect_to root_path, notice: 'El pedido no fue realizado correctamente'
+    if @producto.nil?
+      redirect_to menu_path, alert: "Producto no encontrado";
     end
   end
 

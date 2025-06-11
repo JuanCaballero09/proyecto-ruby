@@ -1,0 +1,9 @@
+<h2>Formulario de confirmación</h2>
+
+<p>Producto: <%= @producto.nombre %></p>
+<p>Precio: <%= number_to_currency(@producto.precio) %></p>
+
+<%= form_with url: formulario_path, method: :post do %>
+  <%= hidden_field_tag :producto_id, @producto.id %>
+  <%= submit_tag "Confirmar compra", class: "btn btn-primary" %>
+<% end %>
