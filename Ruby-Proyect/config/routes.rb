@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "carrito", to: "pages#carrito", as: "carrito"
   post "agregar_al_carrito", to: "pages#agregar_al_carrito", as: "agregar_al_carrito"
   post "carrito/eliminar", to: "pages#eliminar_del_carrito", as: "eliminar_del_carrito"
+  post "/pedido/crear", to: 'pedidos#crear' 
 
   get "editar", to: "pages#edit", as: "edit"
   get "menu", to: "pages#menu", as: "menu"

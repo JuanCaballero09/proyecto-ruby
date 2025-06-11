@@ -39,24 +39,23 @@ class PagesController < ApplicationController
   end
 
   def agregar_al_carrito
-     session[:carrito] ||= []
+    session[:carrito] ||= []
+    producto_id = params[:producto_id].to_i
+    producto = Product.find(producto_id)
 
-  producto_id = params[:producto_id].to_i
-  producto = Product.find(producto_id)
 
-  item = session[:carrito].find { |i| i["id"] == producto_id }
-
-  if item
-    item["cantidad"] = (item["cantidad"] || 0) + 1
-  else
-    session[:carrito] << {
-      "id" => producto.id,
-      "nombre" => producto.nombre,
-      "precio" => producto.precio,
-      "cantidad" => 1
-    }
+    item = session[:carrito].find { |i| i["id"] == producto_id }
+    if item
+      item["cantidad"] = (item["cantidad"] || 0) + 1
+    else
+      session[:carrito] << {
+        "id" => producto.id,
+        "nombre" => producto.nombre,
+        "precio" => producto.precio,
+        "cantidad" => 1
+      }
     end
-    redirect_to carrito_path, notice: "Producto agregado al carrito." 
+    redirect_to carrito_path, notice: "Producto agregado al carrito."
   end
 
   def eliminar_del_carrito
@@ -65,6 +64,22 @@ class PagesController < ApplicationController
     session[:carrito].delete_if {|item| item["id"] == producto_id }
 
     redirect_to carrito_path, notice: "Producto eliminado del carrito."
+  end
+
+  def crear
+    pedido = Pedido.new(
+      producto_id: params[:producto_id],
+      nombre: params[:nombre],
+      apellido: params[:apellido],
+      direccion: params[:direccion],
+      telefono: params[:telefono]
+    )
+
+    if pedido.save
+      redirect_to root_path, notice: 'Pedido realizado con éxito'
+    else 
+      redirect_to root_path, notice: 'El pedido no fue realizado correctamente'
+    end
   end
 
 end
