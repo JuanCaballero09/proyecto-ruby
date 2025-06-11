@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Restaurante',
+      title: 'La Terraza Del Pri',
       theme: ThemeData(
         primaryColor: Colors.amber[800],
         scaffoldBackgroundColor: Colors.amber[50],

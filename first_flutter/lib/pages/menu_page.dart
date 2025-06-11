@@ -14,22 +14,25 @@ class MenuPage extends StatefulWidget {
 }  
 
 class _MenuPageState extends State<MenuPage> {
+@override
+void initState() {
+  super.initState();
+
+  WidgetsBinding.instance.addPostFrameCallback((_) {
+    final state = context.read<ProductBloc>().state;
+    if (state is! ProductLoaded) {
+      context.read<ProductBloc>().add(FetchProducts());
+    }
+  });
+}
+
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ProductBloc, ProductState>(
       builder: (context, state) {
-        if (state is ProductInitial) {
-          return Center(
-            child: ElevatedButton(
-              onPressed: () {
-                context.read<ProductBloc>().add(FetchProducts());
-              },
-              child: const Text('Cargar Productos'),
-            ),
-          );
-        } else if (state is ProductLoading) {
-          return const Center(child: CircularProgressIndicator());
+        if(state is ProductInitial || state is ProductLoading) {
+          return const Center(child: CircularProgressIndicator(),);
         } else if (state is ProductLoaded) {
           final categories = [
             'perro',
