@@ -55,23 +55,16 @@ class PagesController < ApplicationController
         "cantidad" => 1
       }
     end
-    redirect_to carrito_path, notice: "Producto agregado al carrito."
   end
 
   def eliminar_del_carrito
     producto_id = params[:producto_id].to_i
     session[:carrito] ||= []
     session[:carrito].delete_if {|item| item["id"] == producto_id }
-
-    redirect_to carrito_path, notice: "Producto eliminado del carrito."
   end
 
   def formulario
      @producto = Product.find_by(id: params[:producto_id]) 
-
-    if @producto.nil?
-      redirect_to menu_path, alert: "Producto no encontrado";
-    end
   end
 
 end
