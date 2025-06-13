@@ -44,6 +44,8 @@ class _ProductPageState extends State<ProductPage> {
         onTap: _onItemTapped,
         selectedItemColor: Colors.amber[800],
         unselectedItemColor: Colors.grey,
+        
+
         items: const [
             BottomNavigationBarItem(
             icon: Icon(Icons.home),
