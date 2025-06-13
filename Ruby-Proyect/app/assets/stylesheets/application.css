@@ -16,7 +16,7 @@ html,body{
     padding: 0;
 }
 
-a:hover{text-decoration: underline;}
+a:hover{text-decoration: none;}
 input:focus{outline: none;}
 
 /* Inisio de Sesión */
@@ -1020,25 +1020,27 @@ input:focus{outline: none;}
 
 .edit .session-form{width: 100%;}
 
-
-.boton-mandar-carrito{
-    border-radius: 20px;
-    background-color: #FF936B;
-    color:#000;
+.botones-compra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.btn-comprar-ahora{
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #FF936B; 
-    color:#000;
-    border: 1px solid black;
-    border-radius: 20px;
+.boton-compra{
     text-decoration: none;
+    border: none;
+    color: white;
     font-weight: bold;
-    cursor: pointer;
+    background-color: var(--base);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(255, 68, 0, 0.2);
     transition: background-color 0.3s ease;
+}
 
+.boton-compra:hover{
+    background-color: var(--base-claro);
+    transform: scale(1.05);
 }
 
 .titulo-confirmacion-compra{

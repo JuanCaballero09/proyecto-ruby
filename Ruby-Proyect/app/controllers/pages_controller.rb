@@ -64,7 +64,9 @@ class PagesController < ApplicationController
   end
 
   def formulario
-     @producto = Product.find_by(id: params[:producto_id]) 
+    @seccion = "formulario"
+    @producto = Product.find_by(id: params[:producto_id])
+    render :index
   end
 
 end
