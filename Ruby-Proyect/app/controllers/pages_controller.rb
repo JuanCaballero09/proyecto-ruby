@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  before_action :authenticate_user!, only: [:formulario] 
+
   def index
     @seccion = params[:seccion] || "home"
     @grupos = Grupo.all
