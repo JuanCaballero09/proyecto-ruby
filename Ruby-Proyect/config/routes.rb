@@ -5,6 +5,12 @@ Rails.application.routes.draw do
 
   root to: "pages#index"
   get "carrito", to: "pages#carrito", as: "carrito"
+  post "agregar_al_carrito", to: "pages#agregar_al_carrito", as: "agregar_al_carrito"
+  post "carrito/eliminar", to: "pages#eliminar_del_carrito", as: "eliminar_del_carrito"
+  get "menu/formulario", to: "pages#formulario", as: "formulario"
+ 
+
+
   get "editar", to: "pages#edit", as: "edit"
   get "menu", to: "pages#menu", as: "menu"
   get 'product/:nombre', to: 'pages#productos', as: 'productos_por_grupo'

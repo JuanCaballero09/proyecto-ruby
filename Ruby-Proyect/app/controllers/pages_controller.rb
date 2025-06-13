@@ -33,6 +33,38 @@ class PagesController < ApplicationController
 
   def carrito
     @seccion = "carrito"
+    @carrito = session[:carrito] || []
+    @total = @carrito.sum { |p| p["precio"].to_f * p["cantidad"] }
     render :index
   end
+
+  def agregar_al_carrito
+    session[:carrito] ||= []
+    producto_id = params[:producto_id].to_i
+    producto = Product.find(producto_id)
+
+
+    item = session[:carrito].find { |i| i["id"] == producto_id }
+    if item
+      item["cantidad"] = (item["cantidad"] || 0) + 1
+    else
+      session[:carrito] << {
+        "id" => producto.id,
+        "nombre" => producto.nombre,
+        "precio" => producto.precio,
+        "cantidad" => 1
+      }
+    end
+  end
+
+  def eliminar_del_carrito
+    producto_id = params[:producto_id].to_i
+    session[:carrito] ||= []
+    session[:carrito].delete_if {|item| item["id"] == producto_id }
+  end
+
+  def formulario
+     @producto = Product.find_by(id: params[:producto_id]) 
+  end
+
 end
