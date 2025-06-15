@@ -21,7 +21,7 @@
                     <%= hidden_field_tag :producto_id, producto.id %>
                     <%= submit_tag "Agregar al Carrito", class: "boton-compra"%>
                   <% end %>
-                  <%= link_to "Comprar ahora", formulario_path(producto_id: producto.id), class: 'boton-compra' %>
+                  <%= link_to "Comprar ahora", formulario_path(producto.id), class: 'boton-compra' %>
                 </div>
               </div>
             <% end %>

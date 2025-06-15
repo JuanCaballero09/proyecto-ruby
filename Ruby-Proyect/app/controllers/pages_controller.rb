@@ -67,8 +67,19 @@ class PagesController < ApplicationController
 
   def formulario
     @seccion = "formulario"
-    @producto = Product.find_by(id: params[:producto_id])
+    @producto = Product.find(params[:id])
+    @usuario = current_user
     render :index
   end
+
+  def create 
+    producto = Product.find(params[:producto_id])
+    pedido = Pedido.new(
+      user: current_user,
+      producto: producto,
+      cantidad: params[:cantidad],
+      total: producto.precio * params[:cantidad].to_i
+    )
+  end 
 
 end
